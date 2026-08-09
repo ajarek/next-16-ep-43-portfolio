@@ -1,0 +1,53 @@
+{
+  "brand": {
+    "name": "AJAREK DEV",
+    "href": "/",
+    "tagline": "Portfolio front-end developera"
+  },
+  "navLinks": [
+    {
+      "id": "start",
+      "label": "Start",
+      "href": "#start",
+      "description": "Powrót na początek strony"
+    },
+    {
+      "id": "projekty",
+      "label": "Projekty",
+      "href": "#projekty",
+      "description": "Wybrane realizacje i case studies"
+    },
+    {
+      "id": "technologie",
+      "label": "Technologie",
+      "href": "#technologie",
+      "description": "Stos technologiczny i narzędzia"
+    },
+    {
+      "id": "o-mnie",
+      "label": "O mnie",
+      "href": "#o-mnie",
+      "description": "Doświadczenie i proces współpracy"
+    },
+    {
+      "id": "kontakt",
+      "label": "Kontakt",
+      "href": "#kontakt",
+      "description": "Napisz i omówmy Twój projekt"
+    }
+  ],
+  "contactCta": {
+    "label": "Skontaktuj się",
+    "shortLabel": "Kontakt",
+    "href": "#kontakt"
+  },
+  "socialLinks": [
+    { "label": "GitHub", "href": "https://github.com/ajarek", "external": true },
+    {
+      "label": "LinkedIn",
+      "href": "https://www.linkedin.com/in/ajarek",
+      "external": true
+    },
+    { "label": "E-mail", "href": "mailto:kontakt@ajarek.dev", "external": false }
+  ]
+}

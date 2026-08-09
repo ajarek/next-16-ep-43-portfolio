@@ -15,6 +15,9 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-[color-mix(in_oklch,var(--secondary),var(--foreground)_5%)] aria-expanded:bg-secondary aria-expanded:text-secondary-foreground",
         ghost:
           "hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50",
+        // DESIGN.md → „Primary Button": gradient + rozbłysk i poświata przy hover.
+        gradient:
+          "relative overflow-hidden bg-[linear-gradient(120deg,var(--primary-container)_0%,var(--on-primary-fixed-variant)_52%,#38226f_100%)] text-white shadow-[0_8px_24px_-14px_color-mix(in_oklab,var(--primary-container)_90%,transparent)] hover:brightness-115 hover:shadow-[0_12px_32px_-12px_color-mix(in_oklab,var(--primary-container)_95%,transparent)] before:pointer-events-none before:absolute before:inset-y-0 before:-left-full before:w-full before:bg-[linear-gradient(90deg,transparent,rgb(255_255_255/0.22),transparent)] before:transition-transform before:duration-700 before:ease-out hover:before:translate-x-[200%]",
         destructive:
           "bg-destructive/10 text-destructive hover:bg-destructive/20 focus-visible:border-destructive/40 focus-visible:ring-destructive/20 dark:bg-destructive/20 dark:hover:bg-destructive/30 dark:focus-visible:ring-destructive/40",
         link: "text-primary underline-offset-4 hover:underline",
@@ -25,6 +28,8 @@ const buttonVariants = cva(
         xs: "h-6 gap-1 rounded-[min(var(--radius-md),10px)] px-2 text-xs in-data-[slot=button-group]:rounded-lg has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&_svg:not([class*='size-'])]:size-3",
         sm: "h-7 gap-1 rounded-[min(var(--radius-md),12px)] px-2.5 text-[0.8rem] in-data-[slot=button-group]:rounded-lg has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&_svg:not([class*='size-'])]:size-3.5",
         lg: "h-9 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2",
+        // DESIGN.md → akcje główne mają kształt pigułki.
+        pill: "h-8 gap-2 rounded-full px-5 text-sm md:h-[1.875rem] md:px-6",
         icon: "size-8",
         "icon-xs":
           "size-6 rounded-[min(var(--radius-md),10px)] in-data-[slot=button-group]:rounded-lg [&_svg:not([class*='size-'])]:size-3",

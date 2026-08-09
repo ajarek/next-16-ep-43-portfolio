@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Navbar } from "@/components/navbar";
 import "./globals.css";
 
 /**
@@ -35,7 +36,15 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="font-sans text-body-md min-h-full flex flex-col">
-        {children}
+        {/* Skrót klawiaturowy dla czytników ekranu i nawigacji z klawiatury. */}
+        <a
+          href="#start"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[70] focus:rounded-lg focus:bg-primary focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:text-primary-foreground"
+        >
+          Przejdź do treści
+        </a>
+        <Navbar />
+        <main className="flex flex-1 flex-col">{children}</main>
       </body>
     </html>
   );

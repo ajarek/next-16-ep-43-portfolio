@@ -257,6 +257,9 @@
   }
   html {
     @apply font-sans antialiased;
+    scroll-behavior: smooth;
+    /* Wysokość przyklejonego navbara — kotwice nie chowają się pod nagłówkiem. */
+    scroll-padding-top: 5rem;
   }
   body {
     @apply bg-background text-foreground font-sans text-body-md;
@@ -267,6 +270,28 @@
   samp {
     @apply font-mono text-code;
   }
+
+  /* Szacunek dla ustawień systemowych: ograniczenie ruchu. */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* Siatka „developerska" z DESIGN.md — 1px linie o niskiej widoczności. */
+@utility bg-grid {
+  background-image:
+    linear-gradient(to right, var(--outline-variant) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--outline-variant) 1px, transparent 1px);
+  background-size: 2rem 2rem;
 }
 
 /* Responsive display / headline helpers from DESIGN.md */

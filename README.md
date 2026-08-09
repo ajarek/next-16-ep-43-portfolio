@@ -8,6 +8,23 @@ Hero z dynamiką: Sekcja powitalna zawiera animowane liczniki statystyk oraz tr�
 Interaktywność Motion: Każda sekcja posiada animacje wejścia (fade-up), a interfejs reaguje na użytkownika poprzez płynne przejścia i efekty szklanej tafli (Glassmorphism).
 Kompletna struktura: Portfolio zawiera sekcje technologii, procesu współpracy, opinii klientów oraz czytelne CTA, zachowując spójność wizualną z brandem AJAREK DEV.
 
+## Nawigacja (Navbar)
+
+Navbar jest osadzony globalnie w `app/layout.tsx` (nad `<main>`), przyklejony do górnej krawędzi i odwzorowuje wzorzec `public/patterns/navbar.png`:
+logotyp `</>` + AJAREK DEV, wyśrodkowane linki (Start · Projekty · Technologie · O mnie · Kontakt), ikona `<>` z odnośnikiem do repozytorium oraz gradientowa pigułka „Skontaktuj się”.
+
+Struktura plików:
+
+- `components/navbar/index.tsx` — komponent serwerowy składający całość.
+- `components/navbar/navbar-shell.tsx` — klient; szklane tło po przewinięciu (`backdrop-blur`) i gradientowy pasek postępu czytania.
+- `components/navbar/desktop-nav.tsx` — klient; linki z animowanym, świecącym podkreśleniem aktywnej sekcji.
+- `components/navbar/mobile-nav.tsx` — klient; menu wysuwane płynnie z **lewej** krawędzi (Base UI `Drawer`: pułapka fokusa, blokada przewijania, gest swipe, obsługa `Esc`).
+- `components/navbar/brand.tsx` — znak marki współdzielony przez navbar i menu mobilne.
+- `lib/navigation.ts` — jedyne źródło prawdy dla pozycji menu, CTA i odnośników społecznościowych (przykładowe dane: `public/data/navigation.json`).
+- `hooks/use-active-section.ts`, `hooks/use-scroll-progress.ts` — logika scroll spy oraz postępu przewijania poza komponentami.
+
+Przycisk CTA korzysta z rozszerzonego `components/ui/button.tsx` (wariant `gradient`, rozmiar `pill`), dzięki czemu style pozostają w jednym miejscu.
+
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
