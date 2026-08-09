@@ -1,4 +1,16 @@
+Projekt portfolio AJAREK DEV - Nowoczesny, minimalistyczny design inspirowany liderami branży jak Apple i Vercel, wykorzystując najnowsze technologie (Next.js, Tailwind CSS v4, Motion).
+
+Kluczowe elementy projektu:
+
+Immersyjne tło: Zastosowałem shader WebGL, który generuje subtelne gradienty, siatkę (grid) oraz interaktywny efekt „spotlight” podążający za kursorem.
+Wachlarz projektów: Stworzyłem charakterystyczną sekcję z nachodzącymi na siebie kartami, które ożywają po najechaniu myszką, wysuwając się i rozświetlając.
+Hero z dynamiką: Sekcja powitalna zawiera animowane liczniki statystyk oraz trójwymiarową reprezentację stosu technologicznego z unoszącymi się kartami (React, Next.js, itp.).
+Interaktywność Motion: Każda sekcja posiada animacje wejścia (fade-up), a interfejs reaguje na użytkownika poprzez płynne przejścia i efekty szklanej tafli (Glassmorphism).
+Kompletna struktura: Portfolio zawiera sekcje technologii, procesu współpracy, opinii klientów oraz czytelne CTA, zachowując spójność wizualną z brandem AJAREK DEV.
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
 
 ## Getting Started
 
