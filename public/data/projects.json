@@ -1,0 +1,44 @@
+{
+  "projects": [
+    {
+      "id": "ai-dashboard",
+      "index": "01",
+      "title": "AI Dashboard",
+      "description": "Panel analityczny wykorzystujący modele uczenia maszynowego do predyspozycji trendów.",
+      "tags": ["Vue", "Python", "AWS"],
+      "cta": { "label": "Zobacz Case Study", "href": "#" },
+      "visual": "dashboard",
+      "accent": "#8069BF"
+    },
+    {
+      "id": "booking-villas",
+      "index": "02",
+      "title": "Booking Villas",
+      "description": "System rezerwacji premium z kalendarzem.",
+      "tags": ["React", "Node", "Supabase", "tRPC"],
+      "cta": { "label": "Szczegóły", "href": "#" },
+      "visual": "booking",
+      "accent": "#C9A74D"
+    },
+    {
+      "id": "ecommerce-premium",
+      "index": "03",
+      "title": "E-commerce Premium",
+      "description": "Headless e-commerce dla luksusowej marki odzieżowej z optymalizacją Core Web Vitals.",
+      "tags": ["Next.js", "Shopify API"],
+      "cta": { "label": "Szczegóły", "href": "#" },
+      "visual": "shop",
+      "accent": "#06B6D4"
+    },
+    {
+      "id": "premium-platforma",
+      "index": "04",
+      "title": "Premium Platforma",
+      "description": "Kompletna platforma z autorskim systemem zarządzania zamówieniami.",
+      "tags": ["Next.js", "Stripe", "Prisma"],
+      "cta": { "label": "Szczegóły", "href": "#" },
+      "visual": "platform",
+      "accent": "#3B82F6"
+    }
+  ]
+}

@@ -25,6 +25,29 @@ Struktura plików:
 
 Przycisk CTA korzysta z rozszerzonego `components/ui/button.tsx` (wariant `gradient`, rozmiar `pill`), dzięki czemu style pozostają w jednym miejscu.
 
+## Sekcja „Wybrane projekty" (Wachlarz)
+
+Sekcja `id="projekty"` odwzorowuje wzorzec `public/patterns/selected-projects.png` i stanowi interaktywną galerię:
+
+- `components/selected-projects/selected-projects.tsx` — komponent kliencki; na desktopie karty układają się w nachodzący na siebie wachlarz 3D (hover rozwiera łuk i rozświetla kartę, kliknięcie ustawia ją na przodzie), na mobile działają jako karuzela ze scroll snap.
+- `components/selected-projects/project-card.tsx` — szklana karta projektu (DESIGN.md → „Glass Cards").
+- `components/selected-projects/project-visual.tsx` — miniatury generowane w CSS (dashboard, kalendarz, sklep, platforma), napędzane kolorem akcentu projektu.
+- `lib/projects.ts` — typy i dane projektów (jedno źródło prawdy; przykładowe dane: `public/data/projects.json`).
+
+## Sekcja „Engineering" (Technologie)
+
+Sekcja `id="technologie"` odwzorowuje wzorzec `public/patterns/engineering.png`:
+
+- `components/engineering/engineering-section.tsx` — komponent serwerowy; dwie kolumny: po lewej grafika `public/images/skill-hub.png` w szklanej ramie z poświatą i siatką „developerską" (hover powiększa i rozjaśnia grafikę), po prawej nagłówek, opis podejścia, chipy technologii z kolorami logotypów oraz przycisk CTA „POBIERZ CV".
+- `lib/engineering.ts` — typy i dane sekcji (jedno źródło prawdy; przykładowe dane: `public/data/engineering.json`).
+
+## Stopka (Footer)
+
+Stopka jest osadzona globalnie w `app/layout.tsx` (pod `<main>`) i odwzorowuje wzorzec `public/patterns/footer.png`:
+
+- `components/footer/footer.tsx` — pojedynczy rząd: marka `</>` + AJAREK po lewej, linki społecznościowe (Github, LinkedIn, Twitter, Email) z animowanym podkreśleniem w środku, złoty napis copyright po prawej; niemal czarne tło z siatką „developerską" i gradientową linią u góry.
+- `lib/footer.ts` — typy i dane stopki (jedno źródło prawdy; przykładowe dane: `public/data/footer.json`).
+
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 

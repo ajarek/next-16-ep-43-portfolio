@@ -1,0 +1,28 @@
+{
+  "engineering": {
+    "overline": "Technologie",
+    "headingLine1": "Inżynieria spotyka",
+    "headingAccent": "Design",
+    "paragraphs": [
+      "Jako Full-Stack Developer łączę głębokie zrozumienie architektury systemów z wrażliwością na detale interfejsu użytkownika. Wierzę, że najlepszy kod to ten, którego użytkownik nigdy nie zauważa – doświadcza tylko płynnego, bezbłędnego działania.",
+      "Moje podejście opiera się na ciągłej optymalizacji. Od struktury bazy danych po renderowanie komponentów w przeglądarce, każdy etap to okazja do poprawy wydajności."
+    ],
+    "technologies": [
+      { "name": "REACT", "accent": "#61DAFB" },
+      { "name": "NODE.JS", "accent": "#83CD29" },
+      { "name": "NEXT.JS", "accent": "#e6e0e9" },
+      { "name": "TYPESCRIPT", "accent": "#3178C6" },
+      { "name": "PRISMA", "accent": "#5A67D8" }
+    ],
+    "cta": {
+      "label": "POBIERZ CV",
+      "href": "#"
+    },
+    "image": {
+      "src": "/images/skill-hub.png",
+      "alt": "Centralny stos technologiczny — świecący sześcian otoczony ikonami React, Node.js, Next.js, TypeScript i Prisma",
+      "width": 1024,
+      "height": 1024
+    }
+  }
+}

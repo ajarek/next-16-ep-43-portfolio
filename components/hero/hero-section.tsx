@@ -1,20 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
-
+import { Glass } from "@/components/canvasui/Glass"
 import { buttonVariants } from "@/components/ui/button";
 
 export function HeroSection() {
   return (
+    <Glass>
     <section
       id="start"
-      className="relative isolate overflow-hidden rounded-[2rem] border border-border/70 bg-[radial-gradient(circle_at_top_left,color-mix(in_oklab,var(--primary)_18%,transparent)_0%,transparent_40%),linear-gradient(135deg,var(--surface-container)_0%,var(--surface-container-low)_100%) px-6 py-10 shadow-[0_24px_80px_-28px_color-mix(in_oklab,var(--primary)_40%,transparent)] sm:px-8 lg:px-10 lg:py-14"
+      className="relative isolate py-10 lg:py-14"
     >
-      <div className="pointer-events-none absolute inset-0 bg-grid opacity-30" />
-      <div className="pointer-events-none absolute left-[-8%] top-[-12%] h-44 w-44 rounded-full bg-primary/20 blur-3xl" />
-      <div className="pointer-events-none absolute bottom-[-8%] right-[-6%] h-56 w-56 rounded-full bg-tertiary/15 blur-3xl" />
-
-      <div className="absolute inset-0 bg-[linear-gradient(120deg,transparent_0%,color-mix(in_oklab,var(--primary)_10%,transparent)_45%,transparent_100%)] opacity-70" />
-
       <div className="relative grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
         <div className="max-w-2xl space-y-6">
           <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-sm text-primary">
@@ -56,7 +51,7 @@ export function HeroSection() {
           </div>
         </div>
 
-        <div className="relative mx-auto w-full max-w-[31rem]">
+        <div className="relative mx-auto w-full max-w-124">
           <div className="absolute inset-0 rounded-[2rem] border border-primary/20 bg-primary/10 blur-3xl" />
           <div className="relative overflow-hidden rounded-[2rem] border border-border/70 bg-surface-container-low/80 p-3 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.55)] backdrop-blur">
             <div className="relative overflow-hidden rounded-[1.35rem] border border-border/60 bg-background/70 p-2">
@@ -81,5 +76,6 @@ export function HeroSection() {
         </div>
       </div>
     </section>
+    </Glass>
   );
 }

@@ -1,0 +1,14 @@
+{
+  "footer": {
+    "brand": "AJAREK",
+    "year": "2026",
+    "name": "AJAREK DEV",
+    "tagline": "Built with precision.",
+    "links": [
+      { "label": "Github", "href": "https://github.com/ajarek", "external": true },
+      { "label": "LinkedIn", "href": "https://www.linkedin.com/in/ajarek", "external": true },
+      { "label": "Twitter", "href": "https://twitter.com/ajarek", "external": true },
+      { "label": "Email", "href": "mailto:kontakt@ajarek.dev", "external": false }
+    ]
+  }
+}
