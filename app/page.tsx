@@ -1,12 +1,11 @@
-import { Button } from "@/components/ui/button";
+import { HeroSection } from "@/components/hero/hero-section";
+
 export default function Home() {
   return (
-    <div
-      id="start"
-      className="bg-background flex min-h-[calc(100svh-3.5rem)] flex-col items-center justify-start gap-4 p-8 scroll-mt-20 md:min-h-[calc(100svh-4rem)]"
-    >
-      <h1 className="text-5xl font-bold text-foreground">AJAREK DEV</h1>
-      <Button className="h-12 px-8 text-xl">Zobacz moje projekty</Button>
-    </div>
+    <main className="min-h-[calc(100svh-3.5rem)] bg-background px-4 py-8 scroll-mt-20 sm:px-6 md:min-h-[calc(100svh-4rem)] md:px-8 lg:px-10">
+      <div className="mx-auto flex max-w-7xl flex-col gap-6">
+        <HeroSection />
+      </div>
+    </main>
   );
 }
