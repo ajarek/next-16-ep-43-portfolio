@@ -11,7 +11,7 @@ import { FOOTER } from "@/lib/footer";
  */
 export function Footer() {
   return (
-    <footer className="relative isolate overflow-hidden border-t border-white/[0.06] bg-[#0c0d12]">
+    <footer className="relative isolate overflow-hidden border-t border-white/6 bg-[#0c0d12]">
       {/* Górna gradientowa linia — spójna z paskiem postępu navbara. */}
       <span
         aria-hidden
@@ -22,10 +22,10 @@ export function Footer() {
       <span aria-hidden className="bg-grid pointer-events-none absolute inset-0 opacity-[0.06]" />
       <span
         aria-hidden
-        className="pointer-events-none absolute -top-28 left-1/2 h-48 w-[36rem] -translate-x-1/2 rounded-full bg-primary/[0.07] blur-3xl"
+        className="pointer-events-none absolute -top-28 left-1/2 h-48 w-xl -translate-x-1/2 rounded-full bg-primary/[0.07] blur-3xl"
       />
 
-      <div className="relative mx-auto flex w-full max-w-[75rem] flex-col items-center gap-6 px-5 py-8 md:flex-row md:justify-between md:gap-8 md:px-10 md:py-10">
+      <div className="relative mx-auto flex w-full max-w-300 flex-col items-center gap-6 px-5 py-8 md:flex-row md:justify-between md:gap-8 md:px-10 md:py-10">
         {/* ——— Marka ——— */}
         <Link
           href="/"

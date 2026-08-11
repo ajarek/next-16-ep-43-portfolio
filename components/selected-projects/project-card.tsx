@@ -37,7 +37,7 @@ export function ProjectCard({
       }
       data-active={active}
       className={cn(
-        "group/card relative flex w-[16rem] cursor-pointer flex-col overflow-hidden rounded-[1.75rem] border border-border/70 bg-surface-container-low/85 text-left backdrop-blur-xl transition-all duration-500 ease-out select-none sm:w-[18rem] lg:w-[19rem]",
+        "group/card relative flex w-[16rem] cursor-pointer flex-col overflow-hidden rounded-[1.75rem] border border-border/70 bg-surface-container-low/85 text-left backdrop-blur-xl transition-all duration-500 ease-out select-none sm:w-[18rem] lg:w-76 p-3",
         "shadow-[0_24px_60px_-28px_rgba(0,0,0,0.85)]",
         "hover:border-[color-mix(in_oklab,var(--project-accent)_70%,transparent)] hover:shadow-[0_0_0_1px_color-mix(in_oklab,var(--project-accent)_45%,transparent),0_40px_90px_-32px_color-mix(in_oklab,var(--project-accent)_80%,transparent)]",
         className
@@ -83,6 +83,8 @@ export function ProjectCard({
         <div className="mt-auto flex items-center justify-between gap-2 pt-2">
           <Link
             href={project.cta.href}
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={(event) => event.stopPropagation()}
             className="group/link inline-flex items-center gap-1 text-sm font-medium text-[color-mix(in_oklab,var(--project-accent)_85%,white)] outline-none transition-colors duration-300 hover:text-[color-mix(in_oklab,var(--project-accent)_60%,white)] focus-visible:ring-3 focus-visible:ring-ring/50"
           >

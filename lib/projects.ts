@@ -7,7 +7,7 @@
  */
 
 /** Wariant wizualizacji miniatury karty (generowana w CSS). */
-export type ProjectVisual = "dashboard" | "booking" | "shop" | "platform";
+export type ProjectVisual = "dashboard" | "booking" | "shop" | "platform" | "luxe-auto";
 
 export interface ProjectCta {
   readonly label: string;
@@ -34,46 +34,57 @@ export interface Project {
 
 export const PROJECTS: readonly Project[] = [
   {
-    id: "ai-dashboard",
+    id: "ekommerce-stek",
     index: "01",
-    title: "AI Dashboard",
+    title: "E-commerce Stek-Butik",
     description:
-      "Panel analityczny wykorzystujący modele uczenia maszynowego do predyspozycji trendów.",
-    tags: ["Vue", "Python", "AWS"],
-    cta: { label: "Zobacz Case Study", href: "#" },
+      "Sklep premium dla miłośników wołowiny, z systemem rezerwacji i powiadomieniami mailowymi o statusie zamówienia.",
+    tags: ["NextJS", "Tailwind", "FireStore"],
+    cta: { label: "Zobacz Aplikację", href: "https://next-16-ep-42-stek-butik.vercel.app/" },
     visual: "dashboard",
     accent: "#8069BF",
   },
   {
-    id: "booking-villas",
+    id: "booking-glamping",
     index: "02",
-    title: "Booking Villas",
+    title: "Glamping Booking",
     description: "System rezerwacji premium z kalendarzem.",
-    tags: ["React", "Node", "Supabase", "tRPC"],
-    cta: { label: "Szczegóły", href: "#" },
+    tags: ["Next.js", "Tailwind", "Supabase", "tRPC"],
+    cta: { label: "Zobacz Aplikację", href: "https://next-16-ep-39-glamping.vercel.app/" },
     visual: "booking",
     accent: "#C9A74D",
   },
   {
-    id: "ecommerce-premium",
+    id: "ecommerce-jeans",
     index: "03",
-    title: "E-commerce Premium",
+    title: "E-commerce Jeans-Shop",
     description:
-      "Headless e-commerce dla luksusowej marki odzieżowej z optymalizacją Core Web Vitals.",
-    tags: ["Next.js", "Shopify API"],
-    cta: { label: "Szczegóły", href: "#" },
+      "Sklep premium dla miłośników jeansu, z systemem rezerwacji i powiadomieniami mailowymi o statusie zamówienia.",
+    tags: ["Next.js", "Stripe"],
+    cta: { label: "Zobacz Aplikację", href: "https://next-16-ep-41-jeans-shop.vercel.app/" },
     visual: "shop",
     accent: "#06B6D4",
   },
   {
-    id: "premium-platforma",
+    id: "babcia-gotuje",
     index: "04",
-    title: "Premium Platforma",
+    title: "Babcia Gotuje",
     description:
-      "Kompletna platforma z autorskim systemem zarządzania zamówieniami.",
+      "Platforma z potrawami babci, z systemem rezerwacji i powiadomieniami mailowymi o statusie zamówienia.",
     tags: ["Next.js", "Stripe", "Prisma"],
-    cta: { label: "Szczegóły", href: "#" },
+    cta: { label: "Szczegóły", href: "https://next-16-ep-38-babcia-gotuje.vercel.app/" },
     visual: "platform",
     accent: "#3B82F6",
+  },
+  {
+    id: "luxe-auto",
+    index: "05",
+    title: "Luxe Auto",
+    description:
+      "Platforma z luksusowymi samochodami, z systemem rezerwacji i powiadomieniami mailowymi o statusie zamówienia.",
+    tags: ["Next.js", "Stripe", "Prisma"],
+    cta: { label: "Szczegóły", href: "https://next-16-ep-37-luxury-cars.vercel.app/" },
+    visual: "luxe-auto",
+    accent: "#1f1f1f",
   },
 ];

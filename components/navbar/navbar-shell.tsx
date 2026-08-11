@@ -24,7 +24,7 @@ export function NavbarShell({ children }: NavbarShellProps) {
       data-scrolled={scrolled}
       className="sticky top-0 z-50 w-full border-b border-transparent transition-[background-color,border-color,box-shadow] duration-500 data-[scrolled=true]:border-white/[0.07] data-[scrolled=true]:bg-surface-container-lowest/70 data-[scrolled=true]:shadow-[0_18px_40px_-28px_rgb(0_0_0/0.95)] data-[scrolled=true]:backdrop-blur-xl"
     >
-      <div className="mx-auto flex h-14 w-full max-w-[75rem] items-center gap-3 px-5 md:h-16 md:px-10">
+      <div className="mx-auto flex h-14 w-full max-w-300 items-center gap-3 px-5 md:h-16 md:px-10">
         {children}
       </div>
 

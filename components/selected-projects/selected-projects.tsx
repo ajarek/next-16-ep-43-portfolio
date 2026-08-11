@@ -186,7 +186,7 @@ export default function SelectedProjects() {
         {/* ——— Wachlarz (desktop ≥ lg) ——— */}
         <div
           onPointerLeave={() => setHoveredIndex(null)}
-          className="relative mx-auto mt-12 hidden h-[26rem] max-w-4xl [perspective:1400px] lg:block"
+          className="relative mx-auto mt-12 hidden h-104 max-w-4xl perspective:1400px lg:block"
         >
           {PROJECTS.map((project, index) => (
             <div
@@ -213,7 +213,7 @@ export default function SelectedProjects() {
         {/* ——— Karuzela (mobile < lg) ——— */}
         <div
           ref={viewportRef}
-          className="-mx-1 mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth px-1 pb-2 lg:hidden [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          className="-mx-1 mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth px-1 pb-2 lg:hidden scrollbar-none [&::-webkit-scrollbar]:hidden"
         >
           {PROJECTS.map((project, index) => (
             <div

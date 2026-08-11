@@ -45,7 +45,7 @@ export function MobileNav({ className }: MobileNavProps) {
           className
         )}
       >
-        <span aria-hidden className="flex w-4 flex-col items-start gap-[5px]">
+        <span aria-hidden className="flex w-4 flex-col items-start gap-1.25">
           <span className="h-px w-full bg-current transition-transform duration-300 ease-out group-hover:-translate-y-px" />
           <span className="h-px w-3/5 bg-current transition-all duration-300 ease-out group-hover:w-full group-hover:translate-y-px" />
         </span>
@@ -54,8 +54,8 @@ export function MobileNav({ className }: MobileNavProps) {
       <Drawer.Portal>
         <Drawer.Backdrop
           className={cn(
-            "fixed inset-0 z-[60] min-h-dvh bg-[#050307]/80 backdrop-blur-[2px]",
-            "opacity-[calc(1-var(--drawer-swipe-progress))] transition-opacity duration-[450ms]",
+            "fixed inset-0 z-60 min-h-dvh bg-[#050307]/80 backdrop-blur-[2px]",
+            "opacity-[calc(1-var(--drawer-swipe-progress))] transition-opacity duration-450",
             EASING,
             "data-swiping:duration-0 data-starting-style:opacity-0 data-ending-style:opacity-0",
             "data-ending-style:duration-[calc(var(--drawer-swipe-strength)*400ms)]",
@@ -63,16 +63,16 @@ export function MobileNav({ className }: MobileNavProps) {
           )}
         />
 
-        <Drawer.Viewport className="fixed inset-0 z-[60] flex items-stretch justify-start">
+        <Drawer.Viewport className="fixed inset-0 z-60 flex items-stretch justify-start">
           <Drawer.Popup
             className={cn(
               "relative flex h-full w-[min(20rem,86vw)] flex-col overflow-y-auto overscroll-contain",
               "border-r border-white/10 bg-surface-container-lowest/95 text-on-surface backdrop-blur-2xl",
               "shadow-[24px_0_60px_-30px_rgb(0_0_0/0.95)] outline-none touch-auto",
-              "[transform:translateX(var(--drawer-swipe-movement-x))] transition-transform duration-[450ms]",
+              "transform-translateX-[var(--drawer-swipe-movement-x)] transition-transform duration-450",
               EASING,
               "data-swiping:select-none data-swiping:duration-0",
-              "data-starting-style:[transform:translateX(-100%)] data-ending-style:[transform:translateX(-100%)]",
+              "data-starting-style:transform-[translateX(-100%)] data-ending-style:transform-[translateX(-100%)]",
               "data-ending-style:duration-[calc(var(--drawer-swipe-strength)*400ms)]"
             )}
           >
