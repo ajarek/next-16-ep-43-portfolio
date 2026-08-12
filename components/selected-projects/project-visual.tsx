@@ -1,14 +1,23 @@
 import type { ReactNode } from "react"
 
-import type { Project, ProjectVisual } from "@/lib/projects"
+import type { Project, ProjectImage, ProjectVisual } from "@/lib/projects"
 import { cn } from "@/lib/utils"
 import Image from "next/image"
 
 /**
- * Miniatury kart generowane w całości w CSS (bez obrazków).
- * Każdy wariant to stylizowany „mockup" interfejsu, którego akcenty
- * napędzane są zmienną `--project-accent` ustawianą przez kartę projektu.
+ * Miniatury kart projektów — warianty stylizowanych „mockupów", których
+ * akcenty napędzane są zmienną `--project-accent` ustawianą przez kartę projektu.
+ *
+ * Dane miniaturek (src/alt) nie są zapisane na sztywno w komponentach —
+ * pochodzą z definicji projektów w `lib/projects.ts` i są mapowane na
+ * warianty przez słownik `VISUALS`.
  */
+
+/** Właściwości wspólne dla każdego wariantu miniatury. */
+interface VisualProps {
+  /** Obraz miniatury pobrany z definicji projektu w `lib/projects.ts`. */
+  readonly image: ProjectImage
+}
 
 /** Górny pasek „okna przeglądarki" — spójny z motywem developerskim. */
 function WindowChrome() {
@@ -19,92 +28,86 @@ function WindowChrome() {
         <span className='size-2 rounded-full bg-[#febc2e]/80' />
         <span className='size-2 rounded-full bg-[#28c840]/80' />
       </span>
-      <span className='ml-1 h-2.5 flex-1 rounded-full bg-white/6]' />
+      <span className='ml-1 h-2.5 flex-1 rounded-full bg-white/6' />
       <span className='h-2.5 w-10 rounded-full bg-[color-mix(in_oklab,var(--project-accent)_25%,transparent)]' />
     </div>
   )
 }
 
-/** Miniatura projektu AI Shop - Steck Butik */
-function DashboardVisual() {
+/** Miniatura projektu E-commerce Stek-Butik (wariant dashboard). */
+function DashboardVisual({ image }: VisualProps) {
   return (
     <div className='relative flex h-full flex-col'>
       <Image
-        src='/images/steck.jpg'
-        alt='Steck Butik'
+        src={image.src}
+        alt={image.alt}
         fill
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         className='object-cover object-top'
+        loading="eager"
       />
     </div>
   )
 }
 
-/** Siatka kalendarza z zaznaczonymi terminami (Booking Villas). */
-function BookingVisual() {
+/** Miniatura projektu Glamping Booking (wariant booking). */
+function BookingVisual({ image }: VisualProps) {
   return (
-    <div className='flex h-full flex-col px-4 pb-3 pt-2'>
+    <div className='relative flex h-full flex-col px-4 pb-3 pt-2'>
       <Image
-        src='/images/glamping.jpg'
-        alt='Glamping'
+        src={image.src}
+        alt={image.alt}
         fill
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         className='object-cover object-top'
+        loading="eager"
       />
     </div>
   )
 }
 
-/** Siatka produktów (E-commerce Premium). */
-function ShopVisual() {
+/** Miniatura projektu E-commerce Jeans-Shop (wariant shop). */
+function ShopVisual({ image }: VisualProps) {
   return (
-    <div className='grid h-full grid-cols-3 grid-rows-2 gap-1.5 p-3'>
+    <div className='relative grid h-full grid-cols-3 grid-rows-2 gap-1.5 p-3'>
       <Image
-        src='/images/jeans.jpg'
-        alt='E-commerce Premium'
+        src={image.src}
+        alt={image.alt}
         fill
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         className='object-cover object-top'
+        loading="eager"
       />
     </div>
   )
 }
 
-/** Lista zamówień z paskami postępu (Premium Platforma). */
-function PlatformVisual() {
+/** Miniatura z samym obrazem na tle (warianty platform i luxe-auto). */
+function ImageVisual({ image }: VisualProps) {
   return (
-    <div className='flex h-full flex-col justify-center gap-2 px-4 py-2'>
+    <div className='relative flex h-full flex-col justify-center gap-2 px-4 py-2'>
       <Image
-        src='/images/babcia-gotuje.jpg'
-        alt='Babcia Gotuje'
+        src={image.src}
+        alt={image.alt}
         fill
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         className='object-cover object-top'
+        loading="eager"
       />
     </div>
   )
 }
 
-function LuxeAuto() {
-  return (
-    <div className='flex h-full flex-col justify-center gap-2 px-4 py-2'>
-      <Image
-        src='/images/luxe-auto.jpg'
-        alt='Luxe Auto'
-        fill
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        className='object-cover object-top'
-      />
-    </div>
-  )
-}
-
-const VISUALS: Record<ProjectVisual, () => ReactNode> = {
+/**
+ * Mapowanie wariantu wizualizacji (pole `visual` z `lib/projects.ts`)
+ * na komponent miniatury — jedyne miejsce rejestracji wariantów.
+ */
+const VISUALS: Record<ProjectVisual, (props: VisualProps) => ReactNode> = {
   dashboard: DashboardVisual,
   booking: BookingVisual,
   shop: ShopVisual,
-  platform: PlatformVisual,
-  "luxe-auto": LuxeAuto,
+  platform: ImageVisual,
+  "luxe-auto": ImageVisual,
 }
 
 interface ProjectVisualProps {
@@ -128,7 +131,7 @@ export function ProjectVisual({ project, className }: ProjectVisualProps) {
       <span className='pointer-events-none absolute -right-6 -top-8 size-24 rounded-full bg-[color-mix(in_oklab,var(--project-accent)_22%,transparent)] blur-2xl' />
 
       <div className='absolute inset-0'>
-        <Visual />
+        <Visual image={project.image} />
       </div>
 
       <WindowChrome />

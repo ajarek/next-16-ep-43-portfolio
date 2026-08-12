@@ -47,13 +47,13 @@ export const NAV_LINKS: readonly NavLink[] = [
   {
     id: "start",
     label: "Start",
-    href: "#start",
+    href: "/",
     description: "Powrót na początek strony",
   },
   {
     id: "projekty",
     label: "Projekty",
-    href: "#projekty",
+    href: "/projects",
     description: "Wybrane realizacje i case studies",
   },
   {
