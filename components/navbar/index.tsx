@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Code } from "lucide-react";
 
 import { Brand } from "@/components/navbar/brand";
@@ -38,7 +39,7 @@ export function Navbar() {
           <Code aria-hidden strokeWidth={2} className="size-6" />
         </a>
 
-        <a
+        <Link
           href={CONTACT_CTA.href}
           className={cn(
             buttonVariants({ variant: "gradient", size: "pill" }),
@@ -47,7 +48,7 @@ export function Navbar() {
         >
           <span className="hidden sm:inline">{CONTACT_CTA.label}</span>
           <span className="sm:hidden">{CONTACT_CTA.shortLabel}</span>
-        </a>
+        </Link>
       </div>
     </NavbarShell>
   );

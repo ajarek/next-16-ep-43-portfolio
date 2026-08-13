@@ -191,8 +191,7 @@ export function ProjectsGrid({ projects }: ProjectsGridProps) {
             <div
               key={project.id}
               className={cn(
-                "animate-in fade-in slide-in-from-bottom-3 fill-mode-both",
-                index === 0 && "sm:col-span-2"
+                "animate-in fade-in slide-in-from-bottom-3 fill-mode-both"
               )}
               style={{ animationDelay: `${index * 70}ms` }}
             >

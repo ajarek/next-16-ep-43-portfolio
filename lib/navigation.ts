@@ -59,19 +59,19 @@ export const NAV_LINKS: readonly NavLink[] = [
   {
     id: "technologie",
     label: "Technologie",
-    href: "#technologie",
+    href: "/#technologie",
     description: "Stos technologiczny i narzędzia",
   },
   {
     id: "o-mnie",
     label: "O mnie",
-    href: "#o-mnie",
+    href: "/#o-mnie",
     description: "Doświadczenie i proces współpracy",
   },
   {
     id: "kontakt",
     label: "Kontakt",
-    href: "#kontakt",
+    href: "/contact",
     description: "Napisz i omówmy Twój projekt",
   },
 ] as const;
@@ -92,7 +92,7 @@ export const DEFAULT_SECTION_ID: NavSectionId = NAV_LINKS[0].id;
 export const CONTACT_CTA = {
   label: "Skontaktuj się",
   shortLabel: "Kontakt",
-  href: "#kontakt",
+  href: "/#kontakt",
 } as const;
 
 /** Odnośnik do repozytorium — ikona `<>` obok przycisku CTA. */

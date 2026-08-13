@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Glass } from "@/components/canvasui/Glass"
 import { buttonVariants } from "@/components/ui/button";
+import { Mail, Phone } from "lucide-react";
 
 export function HeroSection() {
   return (
@@ -34,10 +35,16 @@ export function HeroSection() {
               Zobacz moje projekty
             </Link>
             <Link
-              href="#kontakt"
+              href="tel:+48573219230"
+              className={buttonVariants({ size: "lg", variant: "outline", className: "h-12 px-6 text-base " })}
+            >
+              <Phone size={40} className="text-green-500" />
+            </Link>
+            <Link
+              href="/contact"
               className={buttonVariants({ size: "lg", variant: "outline", className: "h-12 px-6 text-base" })}
             >
-              Napisz do mnie
+              <Mail size={40} className="text-indigo-400" />
             </Link>
           </div>
 

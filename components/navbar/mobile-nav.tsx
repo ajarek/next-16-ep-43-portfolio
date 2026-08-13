@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { Drawer } from "@base-ui/react/drawer";
 import { ArrowUpRight, X } from "lucide-react";
 
@@ -107,7 +108,7 @@ export function MobileNav({ className }: MobileNavProps) {
                     const active = isNavLinkActive(link, activeSection);
 
                     return (
-                      <a
+                      <Link
                         key={link.id}
                         href={link.href}
                         onClick={closeMenu}
@@ -130,14 +131,14 @@ export function MobileNav({ className }: MobileNavProps) {
                           aria-hidden
                           className="ml-auto size-4 -translate-x-1 opacity-0 transition-all duration-300 ease-out group-hover/link:translate-x-0 group-hover/link:opacity-100"
                         />
-                      </a>
+                      </Link>
                     );
                   })}
                 </nav>
               </div>
 
               <div className="mt-auto flex flex-col gap-5 pt-6">
-                <a
+                <Link
                   href={CONTACT_CTA.href}
                   onClick={closeMenu}
                   className={cn(
@@ -147,7 +148,7 @@ export function MobileNav({ className }: MobileNavProps) {
                 >
                   {CONTACT_CTA.label}
                   <ArrowUpRight aria-hidden className="size-4" />
-                </a>
+                </Link>
 
                 <p className="flex items-center gap-2 text-xs text-on-surface-variant">
                   <span aria-hidden className="relative flex size-2">
