@@ -1,7 +1,6 @@
 "use server";
 
 import {
-  INITIAL_CONTACT_STATE,
   hasFieldErrors,
   isHoneypotFilled,
   parseContactForm,
@@ -51,5 +50,3 @@ export async function sendContactMessage(
     fieldErrors: {},
   };
 }
-
-export { INITIAL_CONTACT_STATE };

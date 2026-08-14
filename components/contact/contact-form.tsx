@@ -18,7 +18,6 @@ const MESSAGE_MAX = 2000;
 
 /**
  * Formularz briefu w oknie terminala (DESIGN.md → Interactive Code Block).
- * Wysyłka idzie przez Server Action; stan i błędy obsługuje `useActionState`.
  */
 export function ContactForm() {
   const formId = useId();
