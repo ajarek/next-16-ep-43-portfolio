@@ -7,22 +7,22 @@
  */
 
 export interface FooterLink {
-  readonly label: string;
-  readonly href: string;
+  readonly label: string
+  readonly href: string
   /** Zewnętrzne odnośniki otwierają się w nowej karcie. */
-  readonly external: boolean;
+  readonly external: boolean
 }
 
 export interface FooterConfig {
   /** Krótki znak marki widoczny w stopce (bez „DEV"). */
-  readonly brand: string;
+  readonly brand: string
   /** Rok w napisie copyright. */
-  readonly year: string;
+  readonly year: string
   /** Pełna nazwa w napisie copyright. */
-  readonly name: string;
+  readonly name: string
   /** Tagline po prawej stronie napisu copyright. */
-  readonly tagline: string;
-  readonly links: readonly FooterLink[];
+  readonly tagline: string
+  readonly links: readonly FooterLink[]
 }
 
 export const FOOTER: FooterConfig = {
@@ -38,6 +38,6 @@ export const FOOTER: FooterConfig = {
       external: true,
     },
     { label: "Twitter", href: "https://twitter.com/ajarek", external: true },
-    { label: "Email", href: "mailto:kontakt@ajarek.dev", external: false },
+    { label: "Email", href: "mailto:ajarek2101@gmail.com", external: false },
   ],
-};
+}

@@ -39,15 +39,23 @@
   "contactCta": {
     "label": "Skontaktuj się",
     "shortLabel": "Kontakt",
-    "href": "#kontakt"
+    "href": "/contact"
   },
   "socialLinks": [
-    { "label": "GitHub", "href": "https://github.com/ajarek", "external": true },
+    {
+      "label": "GitHub",
+      "href": "https://github.com/ajarek",
+      "external": true
+    },
     {
       "label": "LinkedIn",
       "href": "https://www.linkedin.com/in/ajarek",
       "external": true
     },
-    { "label": "E-mail", "href": "mailto:kontakt@ajarek.dev", "external": false }
+    {
+      "label": "E-mail",
+      "href": "mailto:ajarek2101@gmail.com",
+      "external": false
+    }
   ]
 }

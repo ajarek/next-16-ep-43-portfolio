@@ -5,10 +5,26 @@
     "name": "AJAREK DEV",
     "tagline": "Built with precision.",
     "links": [
-      { "label": "Github", "href": "https://github.com/ajarek", "external": true },
-      { "label": "LinkedIn", "href": "https://www.linkedin.com/in/ajarek", "external": true },
-      { "label": "Twitter", "href": "https://twitter.com/ajarek", "external": true },
-      { "label": "Email", "href": "mailto:kontakt@ajarek.dev", "external": false }
+      {
+        "label": "Github",
+        "href": "https://github.com/ajarek",
+        "external": true
+      },
+      {
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com/in/ajarek",
+        "external": true
+      },
+      {
+        "label": "Twitter",
+        "href": "https://twitter.com/ajarek",
+        "external": true
+      },
+      {
+        "label": "Email",
+        "href": "mailto:ajarek2101@gmail.com",
+        "external": false
+      }
     ]
   }
 }
