@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Download } from "lucide-react";
+import { ArrowUpRight, Download } from "lucide-react";
 
 import { buttonVariants } from "@/components/ui/button";
 import { ENGINEERING } from "@/lib/engineering";
@@ -102,11 +102,21 @@ export function EngineeringSection() {
             ))}
           </ul>
 
-          <div className="pt-2">
+          <div className="flex flex-wrap gap-3 pt-2">
+            <Link
+              href="/technologies"
+              className={cn(
+                buttonVariants({ variant: "gradient", size: "pill" }),
+                "h-11 px-6 text-sm font-semibold uppercase tracking-[0.14em]"
+              )}
+            >
+              Pełny stos
+              <ArrowUpRight aria-hidden className="size-4" />
+            </Link>
             <Link
               href={ENGINEERING.cta.href}
               className={cn(
-                buttonVariants({ variant: "gradient", size: "pill" }),
+                buttonVariants({ variant: "outline", size: "pill" }),
                 "h-11 px-6 text-sm font-semibold uppercase tracking-[0.14em]"
               )}
             >

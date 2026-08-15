@@ -18,12 +18,11 @@ export function useActiveSection<TId extends string>(
   const pathname = usePathname();
   const [scrollActiveId, setScrollActiveId] = useState<TId>(defaultId);
 
-  const isProjectsRoute =
-    pathname === "/projects" || pathname?.startsWith("/projects/");
+  const routeSectionId = resolveRouteSectionId(pathname, sectionIds);
 
   useEffect(() => {
     // Na podstronach innych niż główna nie uruchamiamy obserwatora sekcji
-    if (isProjectsRoute) {
+    if (routeSectionId) {
       return;
     }
 
@@ -88,11 +87,40 @@ export function useActiveSection<TId extends string>(
       observer.disconnect();
       window.removeEventListener("hashchange", handleHashChange);
     };
-  }, [sectionIds, defaultId, isProjectsRoute]);
+  }, [sectionIds, defaultId, routeSectionId]);
 
-  if (isProjectsRoute && sectionIds.includes("projekty" as TId)) {
-    return "projekty" as TId;
+  if (routeSectionId) {
+    return routeSectionId;
   }
 
   return scrollActiveId;
+}
+
+/** Mapuje trasę podstrony na identyfikator pozycji menu. */
+function resolveRouteSectionId<TId extends string>(
+  pathname: string | null,
+  sectionIds: readonly TId[],
+): TId | null {
+  const routeMap: Record<string, string> = {
+    "/projects": "projekty",
+    "/technologies": "technologie",
+    "/contact": "kontakt",
+  };
+
+  if (!pathname) {
+    return null;
+  }
+
+  const exact = routeMap[pathname];
+  if (exact && sectionIds.includes(exact as TId)) {
+    return exact as TId;
+  }
+
+  for (const [prefix, id] of Object.entries(routeMap)) {
+    if (pathname.startsWith(`${prefix}/`) && sectionIds.includes(id as TId)) {
+      return id as TId;
+    }
+  }
+
+  return null;
 }

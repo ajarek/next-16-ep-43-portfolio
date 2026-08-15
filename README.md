@@ -38,8 +38,18 @@ Sekcja `id="projekty"` odwzorowuje wzorzec `public/patterns/selected-projects.pn
 
 Sekcja `id="technologie"` odwzorowuje wzorzec `public/patterns/engineering.png`:
 
-- `components/engineering/engineering-section.tsx` — komponent serwerowy; dwie kolumny: po lewej grafika `public/images/skill-hub.png` w szklanej ramie z poświatą i siatką „developerską" (hover powiększa i rozjaśnia grafikę), po prawej nagłówek, opis podejścia, chipy technologii z kolorami logotypów oraz przycisk CTA „POBIERZ CV".
+- `components/engineering/engineering-section.tsx` — komponent serwerowy; dwie kolumny: po lewej grafika `public/images/skill-hub.png` w szklanej ramie z poświatą i siatką „developerską" (hover powiększa i rozjaśnia grafikę), po prawej nagłówek, opis podejścia, chipy technologii z kolorami logotypów oraz przyciski „Pełny stos" (`/technologies`) i „POBIERZ CV".
 - `lib/engineering.ts` — typy i dane sekcji (jedno źródło prawdy; przykładowe dane: `public/data/engineering.json`).
+
+## Strona „Technologie" (`/technologies`)
+
+Pełny kontekst stosu — warstwy od fasady po atmosferę, nie ściana logotypów:
+
+- `app/technologies/page.tsx` — strona serwerowa; manifest, eksplorator, zasady wyboru i CTA.
+- `components/technologies/stack-manifest.tsx` — skill-hub, siatka warstw i okno `stack.ts`.
+- `components/technologies/technologies-explorer.tsx` — klient; wyszukiwarka i filtr warstw.
+- `components/technologies/technology-card.tsx` — szklana karta narzędzia z powiązanymi realizacjami.
+- `lib/technologies.ts` — typy, warstwy, narzędzia i filtrowanie (przykładowe dane: `public/data/technologies.json`).
 
 ## Stopka (Footer)
 

@@ -59,7 +59,7 @@ export const NAV_LINKS: readonly NavLink[] = [
   {
     id: "technologie",
     label: "Technologie",
-    href: "/#technologie",
+    href: "/technologies",
     description: "Stos technologiczny i narzędzia",
   },
   {

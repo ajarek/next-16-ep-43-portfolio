@@ -1,0 +1,121 @@
+{
+  "page": {
+    "overline": "Stos",
+    "path": "~/technologie",
+    "heading": "Kod, którego nikt",
+    "headingAccent": "nie zauważa",
+    "description": "Narzędzia nie są kolekcją logotypów — to warstwy jednego systemu. Od szklanej fasady, której dotyka użytkownik, po pamięć, która przeżywa odświeżenie karty."
+  },
+  "layers": [
+    {
+      "id": "facade",
+      "index": "01",
+      "title": "Fasada",
+      "kicker": "Powierzchnia"
+    },
+    {
+      "id": "contract",
+      "index": "02",
+      "title": "Kontrakt",
+      "kicker": "Język"
+    },
+    {
+      "id": "engine",
+      "index": "03",
+      "title": "Silnik",
+      "kicker": "Komunikacja"
+    },
+    {
+      "id": "memory",
+      "index": "04",
+      "title": "Pamięć",
+      "kicker": "Stan świata"
+    },
+    {
+      "id": "flow",
+      "index": "05",
+      "title": "Przepływ",
+      "kicker": "Pieniądze"
+    },
+    {
+      "id": "atmosphere",
+      "index": "06",
+      "title": "Atmosfera",
+      "kicker": "Światło"
+    }
+  ],
+  "technologies": [
+    {
+      "id": "nextjs",
+      "name": "Next.js",
+      "layer": "facade",
+      "accent": "#e6e0e9",
+      "usedIn": ["ekommerce-stek", "booking-glamping", "ecommerce-jeans", "babcia-gotuje", "luxe-auto", "xbox-360"]
+    },
+    {
+      "id": "react",
+      "name": "React",
+      "layer": "facade",
+      "accent": "#61DAFB"
+    },
+    {
+      "id": "typescript",
+      "name": "TypeScript",
+      "layer": "contract",
+      "accent": "#3178C6"
+    },
+    {
+      "id": "nodejs",
+      "name": "Node.js",
+      "layer": "engine",
+      "accent": "#83CD29"
+    },
+    {
+      "id": "prisma",
+      "name": "Prisma",
+      "layer": "memory",
+      "accent": "#5A67D8",
+      "usedIn": ["babcia-gotuje", "luxe-auto", "xbox-360"]
+    },
+    {
+      "id": "firestore",
+      "name": "Firestore",
+      "layer": "memory",
+      "accent": "#FFCA28",
+      "usedIn": ["ekommerce-stek"]
+    },
+    {
+      "id": "supabase",
+      "name": "Supabase",
+      "layer": "memory",
+      "accent": "#3ECF8E",
+      "usedIn": ["booking-glamping"]
+    },
+    {
+      "id": "trpc",
+      "name": "tRPC",
+      "layer": "engine",
+      "accent": "#398CCB",
+      "usedIn": ["booking-glamping"]
+    },
+    {
+      "id": "stripe",
+      "name": "Stripe",
+      "layer": "flow",
+      "accent": "#635BFF",
+      "usedIn": ["ecommerce-jeans", "babcia-gotuje", "luxe-auto", "xbox-360"]
+    },
+    {
+      "id": "tailwind",
+      "name": "Tailwind CSS",
+      "layer": "facade",
+      "accent": "#38BDF8"
+    },
+    {
+      "id": "webgl",
+      "name": "WebGL",
+      "layer": "atmosphere",
+      "accent": "#06B6D4"
+    }
+  ]
+}

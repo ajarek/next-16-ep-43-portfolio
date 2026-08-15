@@ -35,6 +35,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="pl"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      data-scroll-behavior="smooth"
     >
       <body className="font-sans text-body-md min-h-full flex flex-col">
         {/* Skrót klawiaturowy dla czytników ekranu i nawigacji z klawiatury. */}
