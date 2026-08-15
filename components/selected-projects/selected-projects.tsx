@@ -13,7 +13,8 @@ import { ProjectCard } from "@/components/selected-projects/project-card";
 import { PROJECTS } from "@/lib/projects";
 import { cn } from "@/lib/utils";
 
-const TOTAL = PROJECTS.length;
+const SELECTED_PROJECTS = PROJECTS.slice(0, 5);
+const TOTAL = SELECTED_PROJECTS.length;
 
 /** Szerokość przesunięcia między kolejnymi kartami wachlarza (px). */
 const FAN_STEP = 132;
@@ -188,7 +189,7 @@ export default function SelectedProjects() {
           onPointerLeave={() => setHoveredIndex(null)}
           className="relative mx-auto mt-12 hidden h-104 max-w-4xl perspective:1400px lg:block"
         >
-          {PROJECTS.map((project, index) => (
+          {SELECTED_PROJECTS.map((project, index) => (
             <div
               key={project.id}
               role="button"
@@ -215,7 +216,7 @@ export default function SelectedProjects() {
           ref={viewportRef}
           className="-mx-1 mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth px-1 pb-2 lg:hidden scrollbar-none [&::-webkit-scrollbar]:hidden"
         >
-          {PROJECTS.map((project, index) => (
+          {SELECTED_PROJECTS.map((project, index) => (
             <div
               key={project.id}
               data-project-card

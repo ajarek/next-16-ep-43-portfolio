@@ -115,6 +115,18 @@ export const PROJECTS: readonly Project[] = [
     image: { src: "/images/xbox.jpg", alt: "Xbox 360" },
     accent: "#1f1f1f",
   },
+  {
+    id: "sklep-agd",
+    index: "07",
+    title: "Sklep AGD",
+    description:
+      "Sklep z artykułami AGD.",
+    tags: ["Next.js", "Stripe", "Prisma"],
+    cta: { label: "Szczegóły", href: "https://next-16-ep-35-sklep-household-goods.vercel.app/" },
+    visual: "shop",
+    image: { src: "/images/agd.jpg", alt: "AGD" },
+    accent: "#3B82F6",
+  },
 ];
 
 /**
