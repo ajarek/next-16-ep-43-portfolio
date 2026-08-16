@@ -65,7 +65,7 @@ export const NAV_LINKS: readonly NavLink[] = [
   {
     id: "o-mnie",
     label: "O mnie",
-    href: "/#o-mnie",
+    href: "/about-me",
     description: "Doświadczenie i proces współpracy",
   },
   {

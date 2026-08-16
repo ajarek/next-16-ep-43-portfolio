@@ -51,6 +51,20 @@ Pełny kontekst stosu — warstwy od fasady po atmosferę, nie ściana logotypó
 - `components/technologies/technology-card.tsx` — szklana karta narzędzia z powiązanymi realizacjami.
 - `lib/technologies.ts` — typy, warstwy, narzędzia i filtrowanie (przykładowe dane: `public/data/technologies.json`).
 
+## Strona „O mnie” (`/about-me`)
+
+Kompletny profil inżynierski dewelopera — filozofia rzemiosła, interaktywny profil, filary i metodologia:
+
+- `app/about-me/page.tsx` — strona serwerowa; integracja manifestu, wartości, ścieżki rozwoju, procesu i CTA.
+- `components/about/about-manifesto.tsx` — manifest twórczy i podejście do inżynierii webowej.
+- `components/about/about-code-block.tsx` — interaktywne okno terminala/edytora z profilem dewelopera (`developer.config.ts`) i kopiowaniem kodu.
+- `components/about/about-values.tsx` — 4 filary inżynierii i wartości dewelopera w układzie Bento Grid.
+- `components/about/about-timeline.tsx` — etapy rozwoju i kamienie milowe na podświetlanej osi czasu.
+- `components/about/about-workflow.tsx` — 4-etapowy proces realizacji projektów (Odkrycie, Prototyp, Implementacja, Wdrożenie).
+- `components/about/about-passions.tsx` — technologie eksperymentalne i pasje (Shadery WebGL, AI, Dev Tooling).
+- `components/about/about-cta.tsx` — szklana karta Call-To-Action z gradientowymi poświatami.
+- `lib/about.ts` — typy i dane profilu (jedno źródło prawdy; przykładowe dane: `public/data/about.json`).
+
 ## Stopka (Footer)
 
 Stopka jest osadzona globalnie w `app/layout.tsx` (pod `<main>`) i odwzorowuje wzorzec `public/patterns/footer.png`:
