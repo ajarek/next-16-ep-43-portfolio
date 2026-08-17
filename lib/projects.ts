@@ -127,6 +127,30 @@ export const PROJECTS: readonly Project[] = [
     image: { src: "/images/agd.jpg", alt: "AGD" },
     accent: "#3B82F6",
   },
+  {
+    id: "Pet-shop",
+    index: "08",
+    title: "Pet Shop",
+    description:
+      "Sklep z artykułami dla zwierząt.",
+    tags: ["Next.js", "Stripe", "Prisma"],
+    cta: { label: "Szczegóły", href: "https://next-16-ep-29-your-dog.vercel.app/" },
+    visual: "shop",
+    image: { src: "/images/pet.jpg", alt: "Your Dog" },
+    accent: "#3B82F6",
+  },
+  {
+    id: "city-attractions",
+    index: "09",
+    title: "Atrakcje Miasta",
+    description:
+      "Aplikacja z atrakcjami turystycznymi w mieście.",
+    tags: ["Next.js", "Stripe", "Prisma"],
+    cta: { label: "Szczegóły", href: "https://next-16-ep-21-city-attractions.vercel.app/" },
+    visual: "shop",
+    image: { src: "/images/city-attractions.jpg", alt: "Atrakcje Miasta" },
+    accent: "#3B82F6",
+  },
 ];
 
 /**
