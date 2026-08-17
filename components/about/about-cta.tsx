@@ -15,7 +15,7 @@ export function AboutCta({ cta }: AboutCtaProps) {
   return (
     <section
       aria-labelledby='about-cta-heading'
-      className='relative overflow-hidden rounded-[2rem] border border-border/70 bg-surface-container-low/75 px-6 py-10 backdrop-blur-xl sm:px-10'
+      className='relative overflow-hidden rounded-[2rem] border border-border/70 bg-surface-container-low/75 px-5 py-10 backdrop-blur-xl sm:px-10'
     >
       {/* Dynamiczne poświaty świetlne */}
       <span
@@ -44,12 +44,12 @@ export function AboutCta({ cta }: AboutCtaProps) {
           </p>
         </div>
 
-        <div className='flex flex-wrap gap-3'>
+        <div className='flex flex-col gap-3 sm:flex-row sm:flex-wrap'>
           <Link
             href={cta.primaryHref}
             className={cn(
               buttonVariants({ variant: "gradient", size: "pill" }),
-              "h-11 px-6 text-sm font-semibold uppercase tracking-[0.14em]",
+              "h-11 w-full justify-center px-6 text-sm font-semibold uppercase tracking-[0.14em] sm:w-auto",
             )}
           >
             {cta.primaryLabel}
@@ -59,7 +59,7 @@ export function AboutCta({ cta }: AboutCtaProps) {
             href={cta.secondaryHref}
             className={cn(
               buttonVariants({ variant: "outline", size: "pill" }),
-              "h-11 px-6 text-sm font-semibold uppercase tracking-[0.14em]",
+              "h-11 w-full justify-center px-6 text-sm font-semibold uppercase tracking-[0.14em] sm:w-auto",
             )}
           >
             {cta.secondaryLabel}

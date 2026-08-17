@@ -32,7 +32,7 @@ export function AboutTimeline({ milestones }: AboutTimelineProps) {
             className='group relative flex flex-col gap-2 rounded-[1.5rem] border border-border/70 bg-surface-container-low/70 p-5 sm:p-6 backdrop-blur-xl transition-all duration-300 hover:border-primary/40 hover:bg-surface-container/70'
           >
             {/* Wskaźnik punktu na osi czasu */}
-            <div className='absolute -left-11 sm:-left-13 top-6 flex size-6 items-center justify-center rounded-full border border-primary/50 bg-surface-container-lowest text-primary shadow-[0_0_12px_var(--primary)] transition-transform duration-300 group-hover:scale-110'>
+            <div className='absolute -left-9 top-6 flex size-6 items-center justify-center rounded-full border border-primary/50 bg-surface-container-lowest text-primary shadow-[0_0_12px_var(--primary)] transition-transform duration-300 group-hover:scale-110 sm:-left-11'>
               <GitCommit className='size-3.5' />
             </div>
 

@@ -63,7 +63,7 @@ export default function AboutMePage() {
             </p>
           </div>
 
-          <dl className='flex flex-wrap items-center gap-x-6 gap-y-2 font-mono text-sm tracking-[0.15em] text-on-surface-variant/70'>
+          <dl className='flex flex-wrap items-center gap-x-4 gap-y-2 font-mono text-sm tracking-[0.15em] text-on-surface-variant/70 sm:gap-x-6'>
             {stats.map((stat, index) => {
               const dotColors = [
                 "bg-tertiary shadow-[0_0_10px_var(--tertiary)]",

@@ -24,7 +24,7 @@ export function AboutManifesto({
   return (
     <section
       aria-labelledby="about-manifesto-heading"
-      className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14"
+      className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14"
     >
       {/* Kolumna lewa — treść i manifest */}
       <div className="space-y-6">
@@ -48,12 +48,12 @@ export function AboutManifesto({
           ))}
         </div>
 
-        <div className="flex flex-wrap gap-3 pt-2">
+        <div className="flex flex-col gap-3 pt-2 sm:flex-row sm:flex-wrap">
           <Link
             href="/contact"
             className={cn(
               buttonVariants({ variant: "gradient", size: "pill" }),
-              "h-11 px-6 text-sm font-semibold uppercase tracking-[0.14em]",
+              "h-11 w-full justify-center px-6 text-sm font-semibold uppercase tracking-[0.14em] sm:w-auto",
             )}
           >
             Skontaktuj się
@@ -63,7 +63,7 @@ export function AboutManifesto({
             href="/technologies"
             className={cn(
               buttonVariants({ variant: "outline", size: "pill" }),
-              "h-11 px-6 text-sm font-semibold uppercase tracking-[0.14em]",
+              "h-11 w-full justify-center px-6 text-sm font-semibold uppercase tracking-[0.14em] sm:w-auto",
             )}
           >
             Zobacz technologie

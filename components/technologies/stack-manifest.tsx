@@ -12,10 +12,10 @@ export function StackManifest() {
   return (
     <section
       aria-labelledby='stack-manifest-heading'
-      className='grid items-start gap-6 lg:grid-cols-[0.92fr_1.08fr] lg:gap-8'
+      className='grid items-start gap-6 lg:grid-cols-[0.92fr_1.08fr] lg:gap-8 min-w-0'
     >
-      <div className='flex flex-col gap-4'>
-        <div className='relative mx-auto w-full max-w-124'>
+      <div className='flex flex-col gap-4 min-w-0'>
+        <div className='relative mx-auto w-full max-w-[31rem]'>
           <div
             aria-hidden
             className='absolute inset-0 rounded-[2.5rem] bg-[radial-gradient(60%_60%_at_50%_45%,color-mix(in_oklab,var(--primary)_24%,transparent),transparent_72%)] blur-2xl'
@@ -52,7 +52,7 @@ export function StackManifest() {
           </div>
         </div>
 
-        <ol className='grid grid-cols-2 gap-2 sm:grid-cols-3'>
+        <ol className='grid grid-cols-1 min-[380px]:grid-cols-2 gap-2 sm:grid-cols-3'>
           {TECHNOLOGY_LAYERS.map((layer) => (
             <li
               key={layer.id}
@@ -72,7 +72,7 @@ export function StackManifest() {
         </ol>
       </div>
 
-      <div className='flex flex-col gap-5'>
+      <div className='flex flex-col gap-5 min-w-0'>
         <div className='space-y-4'>
           <h2
             id='stack-manifest-heading'
