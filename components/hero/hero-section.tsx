@@ -1,12 +1,11 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Glass } from "@/components/canvasui/Glass"
 import { buttonVariants } from "@/components/ui/button"
 import { Mail, Phone } from "lucide-react"
 
 export function HeroSection() {
   return (
-    <Glass>
+    
       <section id='start' className='relative isolate py-10 lg:py-14'>
         <div className='relative grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]'>
           <div className='max-w-2xl space-y-6'>
@@ -93,6 +92,6 @@ export function HeroSection() {
           </div>
         </div>
       </section>
-    </Glass>
+    
   )
 }

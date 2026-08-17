@@ -155,7 +155,7 @@ export function ProjectsGrid({ projects }: ProjectsGridProps) {
         <div
           role='group'
           aria-label='Filtruj po technologii'
-          className='flex gap-2 overflow-x-auto pb-1 scrollbar-none [&::-webkit-scrollbar]:hidden'
+          className='flex flex-wrap justify-center gap-2 overflow-x-auto pb-1 scrollbar-none [&::-webkit-scrollbar]:hidden'
         >
           <FilterChip
             label='Wszystkie'
