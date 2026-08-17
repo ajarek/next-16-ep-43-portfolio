@@ -42,9 +42,9 @@ function DashboardVisual({ image }: VisualProps) {
         src={image.src}
         alt={image.alt}
         fill
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
         className='object-cover object-top'
-        loading="eager"
+        loading='eager'
       />
     </div>
   )
@@ -58,9 +58,9 @@ function BookingVisual({ image }: VisualProps) {
         src={image.src}
         alt={image.alt}
         fill
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
         className='object-cover object-top'
-        loading="eager"
+        loading='eager'
       />
     </div>
   )
@@ -74,9 +74,9 @@ function ShopVisual({ image }: VisualProps) {
         src={image.src}
         alt={image.alt}
         fill
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
         className='object-cover object-top'
-        loading="eager"
+        loading='eager'
       />
     </div>
   )
@@ -90,9 +90,9 @@ function ImageVisual({ image }: VisualProps) {
         src={image.src}
         alt={image.alt}
         fill
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
         className='object-cover object-top'
-        loading="eager"
+        loading='eager'
       />
     </div>
   )

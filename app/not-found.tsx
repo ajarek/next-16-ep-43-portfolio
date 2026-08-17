@@ -26,9 +26,7 @@ export default function NotFound() {
         href='/'
         className='flex items-center justify-center gap-2 w-fit px-8 py-4 bg-green-500 font-rajdhani text-lg font-bold tracking-wider  rounded-xl hover:scale-105 active:scale-95 transition-all duration-300 group '
       >
-        <span className='text-white'>
-          Wróć na stronę główną
-        </span>
+        <span className='text-white'>Wróć na stronę główną</span>
         <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform text-white' />
       </Link>
     </div>

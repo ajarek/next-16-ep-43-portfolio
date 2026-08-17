@@ -84,7 +84,7 @@ export function TechnologyCard({
       />
 
       <div className="relative flex items-start justify-between gap-3">
-        <span className="inline-flex size-11 items-center justify-center rounded-2xl border border-[color-mix(in_oklab,var(--tech-accent)_28%,transparent)] bg-[color-mix(in_oklab,var(--tech-accent)_12%,transparent)] text-[var(--tech-accent)]">
+        <span className="inline-flex size-11 items-center justify-center rounded-2xl border border-[color-mix(in_oklab,var(--tech-accent)_28%,transparent)] bg-[color-mix(in_oklab,var(--tech-accent)_12%,transparent)] text-(--tech-accent)">
           <Icon aria-hidden className="size-5" />
         </span>
         <span className="rounded-full border border-border/60 bg-background/50 px-2.5 py-1 font-mono text-[0.6rem] tracking-[0.16em] text-on-surface-variant/70">

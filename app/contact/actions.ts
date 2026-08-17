@@ -1,4 +1,4 @@
-"use server";
+"use server"
 
 import {
   hasFieldErrors,
@@ -6,7 +6,7 @@ import {
   parseContactForm,
   validateContactPayload,
   type ContactFormState,
-} from "@/lib/contact";
+} from "@/lib/contact"
 
 /**
  * Przyjmuje brief z formularza kontaktowego.
@@ -15,25 +15,25 @@ import {
  */
 export async function sendContactMessage(
   _prevState: ContactFormState,
-  formData: FormData
+  formData: FormData,
 ): Promise<ContactFormState> {
   if (isHoneypotFilled(formData)) {
     return {
       status: "success",
       message: "Sygnał dotarł. Odezwę się w ciągu 24 godzin.",
       fieldErrors: {},
-    };
+    }
   }
 
-  const payload = parseContactForm(formData);
-  const fieldErrors = validateContactPayload(payload);
+  const payload = parseContactForm(formData)
+  const fieldErrors = validateContactPayload(payload)
 
   if (hasFieldErrors(fieldErrors)) {
     return {
       status: "error",
       message: "Popraw pola formularza i wyślij sygnał ponownie.",
       fieldErrors,
-    };
+    }
   }
 
   console.info("[kontakt] nowy brief", {
@@ -42,11 +42,11 @@ export async function sendContactMessage(
     projectType: payload.projectType,
     budget: payload.budget || null,
     messageLength: payload.message.length,
-  });
+  })
 
   return {
     status: "success",
     message: "Sygnał dotarł. Odezwę się w ciągu 24 godzin.",
     fieldErrors: {},
-  };
+  }
 }
