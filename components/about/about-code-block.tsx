@@ -60,68 +60,65 @@ export function AboutCodeBlock({ profile }: AboutCodeBlockProps) {
       </div>
 
       {/* Ciało kodu ze stylizacją monospace */}
-      <div className='relative overflow-x-auto p-4 sm:p-6 font-mono text-xs leading-relaxed text-on-surface sm:text-[0.8125rem]'>
-        <pre className='selection:bg-primary/30 selection:text-white'>
+      <div className='relative overflow-x-auto p-4 sm:p-6 font-mono text-[10px] sm:text-xs md:text-sm leading-relaxed text-on-surface max-w-full w-full'>
+        <pre className='selection:bg-primary/30 selection:text-white whitespace-pre-wrap break-words'>
           <code>
             <span className='text-purple-400'>export const</span>{" "}
             <span className='text-cyan-300'>developer</span>:{" "}
             <span className='text-yellow-300'>DeveloperProfile</span> = &#123;
-            {"\n"} <span className='text-on-surface-variant'>alias</span>:{" "}
+            {"\n"}  <span className='text-on-surface-variant'>alias</span>:{" "}
             <span className='text-emerald-300'>&apos;AJAREK DEV&apos;</span>,
-            {"\n"} <span className='text-on-surface-variant'>role</span>:{" "}
+            {"\n"}  <span className='text-on-surface-variant'>role</span>:{" "}
             <span className='text-emerald-300'>
               &apos;Full-Stack &amp; UI Developer&apos;
             </span>
-            ,{"\n"} <span className='text-on-surface-variant'>location</span>:{" "}
+            ,{"\n"}  <span className='text-on-surface-variant'>location</span>:{" "}
             <span className='text-emerald-300'>
               &apos;Polska (CET / UTC+1)&apos;
             </span>
-            ,{"\n"} <span className='text-on-surface-variant'>stack</span>:
+            ,{"\n"}  <span className='text-on-surface-variant'>stack</span>:
             &#123;
-            {"\n"} <span className='text-on-surface-variant'>core</span>: [
-            <span className='text-emerald-300'>&apos;TypeScript&apos;</span>,{" "}
-            <span className='text-emerald-300'>&apos;React 19&apos;</span>,{" "}
-            <span className='text-emerald-300'>&apos;Next.js 16&apos;</span>],
-            {"\n"} <span className='text-on-surface-variant'>styling</span>: [
-            <span className='text-emerald-300'>
+            {"\n"}    <span className='text-on-surface-variant'>core</span>: [
+            {"\n"}      <span className='text-emerald-300'>&apos;TypeScript&apos;</span>,
+            {"\n"}      <span className='text-emerald-300'>&apos;React 19&apos;</span>,
+            {"\n"}      <span className='text-emerald-300'>&apos;Next.js 16&apos;</span>
+            {"\n"}    ],
+            {"\n"}    <span className='text-on-surface-variant'>styling</span>: [
+            {"\n"}      <span className='text-emerald-300'>
               &apos;Tailwind CSS v4&apos;
             </span>
-            ,{" "}
-            <span className='text-emerald-300'>&apos;Design Systems&apos;</span>
-            , <span className='text-emerald-300'>&apos;WebGL&apos;</span>],
-            {"\n"} <span className='text-on-surface-variant'>backend</span>: [
-            <span className='text-emerald-300'>&apos;Node.js&apos;</span>,{" "}
-            <span className='text-emerald-300'>&apos;PostgreSQL&apos;</span>,{" "}
-            <span className='text-emerald-300'>&apos;Prisma&apos;</span>,{" "}
-            <span className='text-emerald-300'>&apos;Firebase&apos;</span>],
-            {"\n"} <span className='text-on-surface-variant'>architecture</span>
-            : [
-            <span className='text-emerald-300'>
+            ,{"\n"}      <span className='text-emerald-300'>&apos;Design Systems&apos;</span>
+            ,{"\n"}      <span className='text-emerald-300'>&apos;WebGL&apos;</span>
+            {"\n"}    ],
+            {"\n"}    <span className='text-on-surface-variant'>backend</span>: [
+            {"\n"}      <span className='text-emerald-300'>&apos;Node.js&apos;</span>,
+            {"\n"}      <span className='text-emerald-300'>&apos;PostgreSQL&apos;</span>,
+            {"\n"}      <span className='text-emerald-300'>&apos;Prisma&apos;</span>,
+            {"\n"}      <span className='text-emerald-300'>&apos;Firebase&apos;</span>
+            {"\n"}    ],
+            {"\n"}    <span className='text-on-surface-variant'>architecture</span>: [
+            {"\n"}      <span className='text-emerald-300'>
               &apos;Server Components&apos;
             </span>
-            ,{" "}
-            <span className='text-emerald-300'>&apos;Server Actions&apos;</span>
-            , <span className='text-emerald-300'>&apos;Type-Safety&apos;</span>]
-            {"\n"} &#125;,
-            {"\n"} <span className='text-on-surface-variant'>principles</span>:
-            [{"\n"}{" "}
-            <span className='text-emerald-300'>
+            ,{"\n"}      <span className='text-emerald-300'>&apos;Server Actions&apos;</span>
+            ,{"\n"}      <span className='text-emerald-300'>&apos;Type-Safety&apos;</span>
+            {"\n"}    ]
+            {"\n"}  &#125;,
+            {"\n"}  <span className='text-on-surface-variant'>principles</span>:
+            [{"\n"}    <span className='text-emerald-300'>
               &apos;Pixel-perfect precision&apos;
             </span>
-            ,{"\n"}{" "}
-            <span className='text-emerald-300'>
+            ,{"\n"}    <span className='text-emerald-300'>
               &apos;Sub-100ms interactions&apos;
             </span>
-            ,{"\n"}{" "}
-            <span className='text-emerald-300'>
+            ,{"\n"}    <span className='text-emerald-300'>
               &apos;Clean &amp; maintainable code&apos;
             </span>
-            ,{"\n"}{" "}
-            <span className='text-emerald-300'>
+            ,{"\n"}    <span className='text-emerald-300'>
               &apos;Empathetic user experience&apos;
             </span>
-            {"\n"} ],
-            {"\n"} <span className='text-on-surface-variant'>status</span>:{" "}
+            {"\n"}  ],
+            {"\n"}  <span className='text-on-surface-variant'>status</span>:{" "}
             <span className='text-yellow-300'>
               &apos;Ready for ambitious challenges&apos;
             </span>

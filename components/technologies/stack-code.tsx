@@ -24,7 +24,7 @@ export function StackCode() {
           {"  "}
           <span className='text-[#cdc0e9]'>fasada</span>
           <span className='text-on-surface-variant/45'>{": "}</span>
-          <span className='text-tertiary'>
+          <span className='text-tertiary text-wrap'>
             {'["Next.js 16", "React 19", "Tailwind v4"]'}
           </span>
           <span className='text-on-surface-variant/45'>,</span>
@@ -32,19 +32,19 @@ export function StackCode() {
           {"  "}
           <span className='text-[#cdc0e9]'>kontrakt</span>
           <span className='text-on-surface-variant/45'>{": "}</span>
-          <span className='text-tertiary'>{'"TypeScript — tryb ścisły"'}</span>
+          <span className='text-tertiary text-wrap'>{'"TypeScript — tryb ścisły"'}</span>
           <span className='text-on-surface-variant/45'>,</span>
           {"\n"}
           {"  "}
           <span className='text-[#cdc0e9]'>silnik</span>
           <span className='text-on-surface-variant/45'>{": "}</span>
-          <span className='text-tertiary'>{'["Node.js", "tRPC"]'}</span>
+          <span className='text-tertiary text-wrap'>{'["Node.js", "tRPC"]'}</span>
           <span className='text-on-surface-variant/45'>,</span>
           {"\n"}
           {"  "}
           <span className='text-[#cdc0e9]'>pamiec</span>
           <span className='text-on-surface-variant/45'>{": "}</span>
-          <span className='text-tertiary'>
+          <span className='text-tertiary text-wrap'>
             {'["Prisma", "Firestore", "Supabase"]'}
           </span>
           <span className='text-on-surface-variant/45'>,</span>
@@ -52,13 +52,13 @@ export function StackCode() {
           {"  "}
           <span className='text-[#cdc0e9]'>przeplyw</span>
           <span className='text-on-surface-variant/45'>{": "}</span>
-          <span className='text-tertiary'>{'"Stripe"'}</span>
+          <span className='text-tertiary text-wrap'>{'"Stripe"'}</span>
           <span className='text-on-surface-variant/45'>,</span>
           {"\n"}
           {"  "}
           <span className='text-[#cdc0e9]'>atmosfera</span>
           <span className='text-on-surface-variant/45'>{": "}</span>
-          <span className='text-tertiary'>
+          <span className='text-tertiary text-wrap'>
             {'["WebGL", "siatka", "spotlight"]'}
           </span>
           <span className='text-on-surface-variant/45'>,</span>
@@ -66,7 +66,7 @@ export function StackCode() {
           {"  "}
           <span className='text-[#cdc0e9]'>zasada</span>
           <span className='text-on-surface-variant/45'>{": "}</span>
-          <span className='text-tertiary'>
+          <span className='text-tertiary text-wrap'>
             {'"użytkownik widzi tylko płynność"'}
           </span>
           <span className='text-on-surface-variant/45'>,</span>
