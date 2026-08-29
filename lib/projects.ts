@@ -151,6 +151,17 @@ export const PROJECTS: readonly Project[] = [
     image: { src: "/images/city-attractions.jpg", alt: "Atrakcje Miasta" },
     accent: "#3B82F6",
   },
+  {
+    id: "luxe-bags",
+    index: "09",
+    title: "Luxe Bags",
+    description: "Nowoczesna platforma e-commerce z produktami luksusowymi.",
+    tags: ["Next.js", "Stripe", "Prisma"],
+    cta: { label: "Szczegóły", href: "https://next-16-ep-45-handbag-shop.vercel.app/" },
+    visual: "shop",
+    image: { src: "/images/bags.png", alt: "Luxe Bags" },
+    accent: "#262626"
+  }
 ];
 
 /**
