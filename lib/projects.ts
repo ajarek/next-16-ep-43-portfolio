@@ -110,7 +110,7 @@ export const PROJECTS: readonly Project[] = [
     description:
       "Sklep z grami na Konsolę Xbox 360.",
     tags: ["Next.js", "Stripe", "Prisma"],
-    cta: { label: "Szczegóły", href: "https://next-16-ep-32-e-commerce-games.vercel.app" },
+    cta: { label: "Szczegóły", href: "https://next-16-ep-46-e-commerce-xbox360.vercel.app/store" },
     visual: "shop",
     image: { src: "/images/xbox.jpg", alt: "Xbox 360" },
     accent: "#1f1f1f",
