@@ -161,6 +161,17 @@ export const PROJECTS: readonly Project[] = [
     visual: "shop",
     image: { src: "/images/bags.png", alt: "Luxe Bags" },
     accent: "#262626"
+  },
+  {
+    id: "finance-tracker",
+    index: "10",
+    title: "Finance Tracker",
+    description: "Platforma monitorująca finanse osobiste.",
+    tags: ["Next.js", "Stripe", "Prisma"],
+    cta: { label: "Szczegóły", href: "https://next-16-ep-47-finance-tracker-platf.vercel.app/" },
+    visual: "shop",
+    image: { src: "/images/finance-tracker.png", alt: "Finance Tracker" },
+    accent: "#262626"
   }
 ];
 
