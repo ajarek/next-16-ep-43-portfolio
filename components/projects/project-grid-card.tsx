@@ -13,8 +13,9 @@ interface ProjectGridCardProps {
 
 /**
  * Karta projektu na stronie `/projekty` — cała tafla jest odnośnikiem
- * do aplikacji (DESIGN.md → „Glass Cards"), a kolor akcentu trafia
- * do zmiennej `--project-accent`, z której korzysta miniatura i poświaty.
+ * do aplikacji (DESIGN.md → „Glass Cards").
+ * Miniatura zrzutu ekranu zachowuje proporcję 800/500, a numeracja projektu
+ * i tagi technologiczne są czytelnie wyeksponowane w sekcji informacyjnej.
  */
 export function ProjectGridCard({ project, className }: ProjectGridCardProps) {
   return (
@@ -36,41 +37,46 @@ export function ProjectGridCard({ project, className }: ProjectGridCardProps) {
         className,
       )}
     >
-      {/* Poświata w tle karty — wyłania się przy hoverze. */}
+      {/* Poświata w tle karty — wyłania się przy najechaniu myszą */}
       <span
         aria-hidden
         className='pointer-events-none absolute inset-x-0 -top-16 h-32 bg-[radial-gradient(60%_100%_at_50%_0%,color-mix(in_oklab,var(--project-accent)_28%,transparent),transparent_70%)] opacity-0 transition-opacity duration-500 group-hover/card:opacity-100'
       />
 
-      {/* Numer porządkowy — subtelny znak wodny pod paskiem okna miniatury. */}
-      <span
-        aria-hidden
-        className='pointer-events-none absolute right-4 top-10 z-10 font-mono text-xs tracking-[0.2em] text-on-surface-variant/70'
-      >
-        /{project.index}
-      </span>
+      {/* Miniatura zrzutu ekranu o proporcji 800/500 */}
+      <div className='overflow-hidden rounded-t-[1.75rem] border-b border-border/50'>
+        <ProjectVisual
+          project={project}
+          className='transition-transform duration-500 ease-out group-hover/card:scale-[1.02]'
+        />
+      </div>
 
-      <ProjectVisual
-        project={project}
-        className='transition-transform duration-500 ease-out group-hover/card:scale-[1.04]'
-      />
-
+      {/* Treść karty: tagi, numer, tytuł, opis i CTA */}
       <div className='relative flex flex-1 flex-col gap-2.5 p-4 sm:p-5'>
-        <span className='flex flex-wrap gap-1.5'>
-          {project.tags.slice(0, 3).map((tag) => (
-            <span
-              key={tag}
-              className='rounded-full border border-[color-mix(in_oklab,var(--project-accent)_30%,transparent)] bg-[color-mix(in_oklab,var(--project-accent)_12%,transparent)] px-2 py-0.5 text-[0.62rem] font-medium text-[color-mix(in_oklab,var(--project-accent)_75%,white)]'
-            >
-              {tag}
-            </span>
-          ))}
-          {project.tags.length > 3 && (
-            <span className='rounded-full border border-white/10 bg-white/5 px-2 py-0.5 text-[0.62rem] text-on-surface-variant/70'>
-              +{project.tags.length - 3}
-            </span>
-          )}
-        </span>
+        <div className='flex items-center justify-between gap-2'>
+          <span className='flex flex-wrap gap-1.5'>
+            {project.tags.slice(0, 3).map((tag) => (
+              <span
+                key={tag}
+                className='rounded-full border border-[color-mix(in_oklab,var(--project-accent)_30%,transparent)] bg-[color-mix(in_oklab,var(--project-accent)_12%,transparent)] px-2 py-0.5 text-[0.62rem] font-medium text-[color-mix(in_oklab,var(--project-accent)_75%,white)]'
+              >
+                {tag}
+              </span>
+            ))}
+            {project.tags.length > 3 && (
+              <span className='rounded-full border border-white/10 bg-white/5 px-2 py-0.5 text-[0.62rem] text-on-surface-variant/70'>
+                +{project.tags.length - 3}
+              </span>
+            )}
+          </span>
+
+          <span
+            aria-hidden
+            className='font-mono text-xs tracking-[0.2em] text-on-surface-variant/70'
+          >
+            /{project.index}
+          </span>
+        </div>
 
         <h2 className='text-lg font-semibold tracking-[-0.02em] text-foreground sm:text-xl'>
           {project.title}
@@ -90,7 +96,7 @@ export function ProjectGridCard({ project, className }: ProjectGridCardProps) {
         </div>
       </div>
 
-      {/* Linia akcentu na dole karty — rozwija się przy hoverze. */}
+      {/* Linia akcentu na dole karty — rozwija się przy najechaniu */}
       <span
         aria-hidden
         className='pointer-events-none absolute inset-x-0 bottom-0 z-10 h-0.5 origin-left scale-x-0 bg-[color-mix(in_oklab,var(--project-accent)_80%,white)] transition-transform duration-500 ease-out group-hover/card:scale-x-100'

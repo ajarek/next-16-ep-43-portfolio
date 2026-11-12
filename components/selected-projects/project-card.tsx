@@ -49,7 +49,7 @@ export function ProjectCard({
         className='pointer-events-none absolute inset-x-0 -top-16 h-32 bg-[radial-gradient(60%_100%_at_50%_0%,color-mix(in_oklab,var(--project-accent)_28%,transparent),transparent_70%)] opacity-0 transition-opacity duration-500 group-hover/card:opacity-100'
       />
 
-      <ProjectVisual project={project} />
+      <ProjectVisual project={project} className='rounded-[1.25rem]' />
 
       <div className='relative flex flex-1 flex-col gap-2.5 p-4 sm:p-5'>
         <div className='flex items-center justify-between gap-2'>

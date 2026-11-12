@@ -235,7 +235,7 @@ export function HeroVideo({ className }: HeroVideoProps) {
           />
 
           {/* Subtelny filtr gradientowy */}
-          <div className='pointer-events-none absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-background/25' />
+          <div className='pointer-events-none absolute inset-0 bg-linear-to-t from-background/70 via-transparent to-background/25' />
 
           {/* Wskaźnik kliknięcia na środku wideo */}
           {showCenterFeedback && (
