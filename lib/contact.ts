@@ -93,8 +93,8 @@ export const CONTACT: ContactConfig = {
     {
       id: "linkedin",
       label: "LinkedIn",
-      value: "linkedin.com/in/ajarek",
-      href: "https://www.linkedin.com/in/ajarek",
+      value: "https://linkedin.com/in/ajarek-calvert",
+      href: "https://linkedin.com/in/ajarek-calvert",
       hint: "Sieć i referencje",
       external: true,
     },

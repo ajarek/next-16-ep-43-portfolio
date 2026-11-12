@@ -34,7 +34,7 @@ export const FOOTER: FooterConfig = {
     { label: "Github", href: "https://github.com/ajarek", external: true },
     {
       label: "LinkedIn",
-      href: "https://www.linkedin.com/in/ajarek",
+      href: "https://linkedin.com/in/ajarek-calvert",
       external: true,
     },
     { label: "Twitter", href: "https://twitter.com/ajarek", external: true },

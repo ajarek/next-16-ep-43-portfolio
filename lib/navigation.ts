@@ -106,7 +106,7 @@ export const SOCIAL_LINKS: readonly SocialLink[] = [
   { label: "GitHub", href: "https://github.com/ajarek", external: true },
   {
     label: "LinkedIn",
-    href: "https://www.linkedin.com/in/ajarek",
+    href: "https://linkedin.com/in/ajarek-calvert",
     external: true,
   },
   { label: "E-mail", href: "mailto:ajarek2101@gmail.com", external: false },
