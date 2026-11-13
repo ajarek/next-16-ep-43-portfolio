@@ -41,6 +41,7 @@ function ProjectImageContainer({ image }: VisualProps) {
         src={image.src}
         alt={image.alt}
         fill
+        loading={image.src === "/images/steck.jpg" ? "eager" : "lazy"}
         sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
         className='object-cover object-center'
       />
