@@ -7,7 +7,8 @@ import {
   type CSSProperties,
   type KeyboardEvent,
 } from "react"
-import { ArrowLeft, ArrowRight } from "lucide-react"
+import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react"
+import Link from "next/link"
 
 import { ProjectCard } from "@/components/selected-projects/project-card"
 import { PROJECTS } from "@/lib/projects"
@@ -126,6 +127,16 @@ export default function SelectedProjects() {
               Przekrojowe realizacje demonstrujące zaawansowane podejście do
               architektury i designu.
             </p>
+            <Link
+              href='/projects'
+              className='group/all inline-flex items-center gap-1.5 text-sm font-semibold text-primary outline-none transition-colors hover:text-foreground focus-visible:ring-3 focus-visible:ring-ring/50'
+            >
+              Zobacz wszystkie projekty
+              <ArrowUpRight
+                aria-hidden
+                className='size-4 transition-transform duration-300 group-hover/all:-translate-y-0.5 group-hover/all:translate-x-0.5'
+              />
+            </Link>
           </div>
 
           {/* Sterowanie wachlarzem (desktop) i karuzelą (mobile). */}

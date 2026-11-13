@@ -53,7 +53,10 @@ export const PROJECTS: readonly Project[] = [
     tags: ["NextJS", "Tailwind", "FireStore"],
     cta: { label: "Zobacz Aplikację", href: "https://next-16-ep-42-stek-butik.vercel.app/" },
     visual: "dashboard",
-    image: { src: "/images/steck.jpg", alt: "Steck Butik" },
+    image: {
+      src: "/images/steck.jpg",
+      alt: "Zrzut ekranu sklepu internetowego Stek-Butik z ofertą wołowiny",
+    },
     accent: "#8069BF",
   },
   {
@@ -64,7 +67,10 @@ export const PROJECTS: readonly Project[] = [
     tags: ["Next.js", "Tailwind", "Supabase", "tRPC"],
     cta: { label: "Zobacz Aplikację", href: "https://next-16-ep-39-glamping.vercel.app/" },
     visual: "booking",
-    image: { src: "/images/glamping.jpg", alt: "Glamping" },
+    image: {
+      src: "/images/glamping.jpg",
+      alt: "Widok strony rezerwacji pobytów glampingowych",
+    },
     accent: "#C9A74D",
   },
   {
@@ -72,11 +78,14 @@ export const PROJECTS: readonly Project[] = [
     index: "03",
     title: "E-commerce Jeans-Shop",
     description:
-      "Sklep premium dla miłośników jeansu, z systemem rezerwacji i powiadomieniami mailowymi o statusie zamówienia.",
+      "Sklep internetowy z odzieżą jeansową i przejrzystą prezentacją kolekcji.",
     tags: ["Next.js", "Stripe"],
     cta: { label: "Zobacz Aplikację", href: "https://next-16-ep-41-jeans-shop.vercel.app/" },
     visual: "shop",
-    image: { src: "/images/jeans.jpg", alt: "E-commerce Premium" },
+    image: {
+      src: "/images/jeans.jpg",
+      alt: "Zrzut ekranu sklepu internetowego z odzieżą jeansową",
+    },
     accent: "#06B6D4",
   },
   {
@@ -84,11 +93,14 @@ export const PROJECTS: readonly Project[] = [
     index: "04",
     title: "Babcia Gotuje",
     description:
-      "Platforma z potrawami babci, z systemem rezerwacji i powiadomieniami mailowymi o statusie zamówienia.",
+      "Serwis kulinarny z przepisami i potrawami inspirowanymi domową kuchnią.",
     tags: ["Next.js", "Stripe", "Prisma"],
     cta: { label: "Szczegóły", href: "https://next-16-ep-38-babcia-gotuje.vercel.app/" },
     visual: "platform",
-    image: { src: "/images/babcia-gotuje.jpg", alt: "Babcia Gotuje" },
+    image: {
+      src: "/images/babcia-gotuje.jpg",
+      alt: "Widok serwisu Babcia Gotuje z przepisami kulinarnymi",
+    },
     accent: "#3B82F6",
   },
   {
@@ -96,11 +108,14 @@ export const PROJECTS: readonly Project[] = [
     index: "05",
     title: "Luxe Auto",
     description:
-      "Platforma z luksusowymi samochodami, z systemem rezerwacji i powiadomieniami mailowymi o statusie zamówienia.",
+      "Serwis prezentujący luksusowe samochody i ofertę marki Luxe Auto.",
     tags: ["Next.js", "Stripe", "Prisma"],
     cta: { label: "Szczegóły", href: "https://next-16-ep-37-luxury-cars.vercel.app/" },
     visual: "luxe-auto",
-    image: { src: "/images/luxe-auto.jpg", alt: "Luxe Auto" },
+    image: {
+      src: "/images/luxe-auto.jpg",
+      alt: "Zrzut ekranu serwisu z ofertą luksusowych samochodów Luxe Auto",
+    },
     accent: "#1f1f1f",
   },
   {
@@ -108,23 +123,28 @@ export const PROJECTS: readonly Project[] = [
     index: "06",
     title: "Xbox 360 Classic",
     description:
-      "Sklep z grami na Konsolę Xbox 360.",
+      "Sklep internetowy z grami i produktami dla konsoli Xbox 360.",
     tags: ["Next.js", "Stripe", "Prisma"],
     cta: { label: "Szczegóły", href: "https://next-16-ep-46-e-commerce-xbox360.vercel.app/store" },
     visual: "shop",
-    image: { src: "/images/xbox.jpg", alt: "Xbox 360" },
+    image: {
+      src: "/images/xbox.jpg",
+      alt: "Widok sklepu Xbox 360 Classic z grami na konsolę Xbox 360",
+    },
     accent: "#1f1f1f",
   },
   {
     id: "sklep-agd",
     index: "07",
     title: "Sklep AGD",
-    description:
-      "Sklep z artykułami AGD.",
+    description: "Sklep internetowy z artykułami gospodarstwa domowego.",
     tags: ["Next.js", "Stripe", "Prisma"],
     cta: { label: "Szczegóły", href: "https://next-16-ep-35-sklep-household-goods.vercel.app/" },
     visual: "shop",
-    image: { src: "/images/agd.jpg", alt: "AGD" },
+    image: {
+      src: "/images/agd.jpg",
+      alt: "Zrzut ekranu sklepu internetowego z artykułami AGD",
+    },
     accent: "#3B82F6",
   },
   {
@@ -136,7 +156,10 @@ export const PROJECTS: readonly Project[] = [
     tags: ["Next.js", "Stripe", "Prisma"],
     cta: { label: "Szczegóły", href: "https://next-16-ep-29-your-dog.vercel.app/" },
     visual: "shop",
-    image: { src: "/images/pet.jpg", alt: "Your Dog" },
+    image: {
+      src: "/images/pet.jpg",
+      alt: "Widok sklepu zoologicznego Your Dog z produktami dla zwierząt",
+    },
     accent: "#3B82F6",
   },
   {
@@ -148,29 +171,38 @@ export const PROJECTS: readonly Project[] = [
     tags: ["Next.js", "Stripe", "Prisma"],
     cta: { label: "Szczegóły", href: "https://next-16-ep-21-city-attractions.vercel.app/" },
     visual: "shop",
-    image: { src: "/images/city-attractions.jpg", alt: "Atrakcje Miasta" },
+    image: {
+      src: "/images/city-attractions.jpg",
+      alt: "Widok aplikacji prezentującej atrakcje turystyczne miasta",
+    },
     accent: "#3B82F6",
   },
   {
     id: "luxe-bags",
-    index: "09",
+    index: "10",
     title: "Luxe Bags",
     description: "Nowoczesna platforma e-commerce z produktami luksusowymi.",
     tags: ["Next.js", "Stripe", "Prisma"],
     cta: { label: "Szczegóły", href: "https://next-16-ep-45-handbag-shop.vercel.app/" },
     visual: "shop",
-    image: { src: "/images/bags.png", alt: "Luxe Bags" },
+    image: {
+      src: "/images/bags.png",
+      alt: "Zrzut ekranu sklepu Luxe Bags z luksusowymi torebkami",
+    },
     accent: "#262626"
   },
   {
     id: "finance-tracker",
-    index: "10",
+    index: "11",
     title: "Finance Tracker",
     description: "Platforma monitorująca finanse osobiste.",
     tags: ["Next.js", "Stripe", "Prisma"],
     cta: { label: "Szczegóły", href: "https://next-16-ep-47-finance-tracker-platf.vercel.app/" },
     visual: "shop",
-    image: { src: "/images/finance-tracker.png", alt: "Finance Tracker" },
+    image: {
+      src: "/images/finance-tracker.png",
+      alt: "Widok aplikacji Finance Tracker do monitorowania finansów osobistych",
+    },
     accent: "#262626"
   }
 ];

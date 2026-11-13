@@ -1,15 +1,15 @@
-import type { Metadata } from "next"
-
 import { ContactAside } from "@/components/contact/contact-aside"
 import { ContactForm } from "@/components/contact/contact-form"
 import { ContactSpotlight } from "@/components/contact/contact-spotlight"
 import { CONTACT } from "@/lib/contact"
+import { createPageMetadata } from "@/lib/seo"
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "Kontakt",
   description:
-    "Nawiąż współpracę z AJAREK DEV — krótki brief, odpowiedź w ciągu 24 godzin. Strony, sklepy i aplikacje premium.",
-}
+    "Skontaktuj się z AJAREK DEV w sprawie strony internetowej, sklepu lub aplikacji webowej. Opisz krótko swój projekt i porozmawiajmy o współpracy.",
+  path: "/contact",
+})
 
 /**
  * Strona `/contact` — kanał komunikacji w estetyce future-noir.

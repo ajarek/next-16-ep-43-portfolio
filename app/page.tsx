@@ -2,6 +2,13 @@ import { HeroSection } from "@/components/hero/hero-section"
 import SelectedProjects from "@/components/selected-projects/selected-projects"
 import { EngineeringSection } from "@/components/engineering/engineering-section"
 import { ContactSpotlight } from "@/components/contact/contact-spotlight"
+import { createPageMetadata, SITE_DESCRIPTION } from "@/lib/seo"
+
+export const metadata = createPageMetadata({
+  title: "Strony internetowe i aplikacje webowe",
+  description: SITE_DESCRIPTION,
+  path: "/",
+})
 
 export default function Home() {
   return (

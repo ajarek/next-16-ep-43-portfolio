@@ -1,13 +1,13 @@
-import type { Metadata } from "next"
-
 import { ProjectsGrid } from "@/components/projects/projects-grid"
 import { PROJECTS } from "@/lib/projects"
+import { createPageMetadata } from "@/lib/seo"
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "Projekty",
   description:
-    "Wszystkie realizacje AJAREK DEV — sklepy e-commerce, platformy rezerwacyjne i aplikacje premium. Filtruj po technologii lub szukaj po nazwie.",
-}
+    "Zobacz projekty AJAREK DEV: sklepy internetowe, systemy rezerwacji i aplikacje webowe tworzone w Next.js, React i TypeScript.",
+  path: "/projects",
+})
 
 /**
  * Strona `/projekty` — wszystkie realizacje z `lib/projects.ts`
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
  */
 export default function ProjectsPage() {
   return (
-    <main className='relative isolate min-h-[calc(100svh-3.5rem)] overflow-hidden bg-[radial-gradient(circle_at_top_left,color-mix(in_oklab,var(--primary)_14%,transparent)_0%,transparent_42%),linear-gradient(135deg,var(--surface-container)_0%,var(--surface-container-low)_100%)] px-4 py-10 scroll-mt-20 sm:px-6 md:min-h-[calc(100svh-4rem)] md:px-8 lg:px-10'>
+    <div className='relative isolate min-h-[calc(100svh-3.5rem)] overflow-hidden bg-[radial-gradient(circle_at_top_left,color-mix(in_oklab,var(--primary)_14%,transparent)_0%,transparent_42%),linear-gradient(135deg,var(--surface-container)_0%,var(--surface-container-low)_100%)] px-4 py-10 scroll-mt-20 sm:px-6 md:min-h-[calc(100svh-4rem)] md:px-8 lg:px-10'>
       {/* Jednolite tło strony — siatka „developerska" (DESIGN.md). */}
       <div className='pointer-events-none absolute inset-0 bg-grid opacity-25' />
 
@@ -53,6 +53,6 @@ export default function ProjectsPage() {
 
         <ProjectsGrid projects={PROJECTS} />
       </div>
-    </main>
+    </div>
   )
 }

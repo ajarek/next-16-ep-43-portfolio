@@ -333,3 +333,38 @@
   font-weight: var(--text-label-sm--font-weight);
   text-transform: uppercase;
 }
+
+/* Świetlny refleks przesuwający się po wizualizacji stosu na hover. */
+.engineering-visual-sheen::after {
+  position: absolute;
+  inset: -45% auto -45% -55%;
+  width: 38%;
+  content: "";
+  transform: rotate(24deg);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in oklab, white 28%, var(--primary)),
+    transparent
+  );
+  filter: blur(10px);
+  opacity: 0;
+}
+
+.group\/visual:hover .engineering-visual-sheen::after {
+  animation: engineering-visual-sweep 1.15s ease-out forwards;
+}
+
+@keyframes engineering-visual-sweep {
+  0% {
+    left: -55%;
+    opacity: 0;
+  }
+  18% {
+    opacity: 0.8;
+  }
+  100% {
+    left: 125%;
+    opacity: 0;
+  }
+}

@@ -33,13 +33,13 @@ export function EngineeringSection() {
 
           <div className='group/visual relative overflow-hidden rounded-[2rem] border border-border/70 bg-surface-container-low/80 p-3 shadow-[0_24px_70px_-30px_rgba(0,0,0,0.8)] backdrop-blur transition-all duration-500 hover:border-primary/40 hover:shadow-[0_0_0_1px_color-mix(in_oklab,var(--primary)_25%,transparent),0_30px_90px_-32px_color-mix(in_oklab,var(--primary)_45%,transparent)]'>
             <div className='relative overflow-hidden rounded-[1.35rem] border border-border/60 bg-background/70 p-2'>
-              <div className='relative overflow-hidden rounded-[1.15rem]'>
+              <div className='engineering-visual-image relative overflow-hidden rounded-[1.15rem]'>
                 <Image
                   src={ENGINEERING.image.src}
                   alt={ENGINEERING.image.alt}
                   width={ENGINEERING.image.width}
                   height={ENGINEERING.image.height}
-                  className='h-auto w-full object-cover transition-transform duration-700 ease-out group-hover/visual:scale-[1.04]'
+                  className='h-auto w-full object-cover transition-transform duration-700 ease-out group-hover/visual:scale-[1.07] group-hover/visual:rotate-1'
                 />
                 {/* Siatka „developerska" na grafice — spójna z tłem strony. */}
                 <div
@@ -51,6 +51,8 @@ export function EngineeringSection() {
                   aria-hidden
                   className='pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,color-mix(in_oklab,var(--primary)_10%,transparent)_0%,transparent_38%)] opacity-0 transition-opacity duration-700 group-hover/visual:opacity-100'
                 />
+                <div aria-hidden className='engineering-visual-sheen pointer-events-none absolute inset-0 opacity-0 group-hover/visual:opacity-100' />
+                <div aria-hidden className='pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,color-mix(in_oklab,var(--primary)_24%,transparent),transparent_58%)] opacity-0 transition-opacity duration-700 group-hover/visual:opacity-100' />
               </div>
             </div>
 

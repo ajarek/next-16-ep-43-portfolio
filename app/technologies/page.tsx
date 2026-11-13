@@ -1,4 +1,3 @@
-import type { Metadata } from "next"
 import Link from "next/link"
 import { ArrowUpRight, Mail } from "lucide-react"
 
@@ -14,12 +13,14 @@ import {
   countLinkedProjects,
 } from "@/lib/technologies"
 import { cn } from "@/lib/utils"
+import { createPageMetadata } from "@/lib/seo"
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "Technologie",
   description:
-    "Stos AJAREK DEV — warstwy od fasady Next.js po pamięć Prisma i przepływ Stripe. Kod, którego użytkownik nigdy nie zauważa.",
-}
+    "Technologie i narzędzia używane przez AJAREK DEV: Next.js, React, TypeScript, Tailwind CSS, Node.js, Prisma i Stripe.",
+  path: "/technologies",
+})
 
 /**
  * Strona `/technologies` — pełny kontekst stosu.

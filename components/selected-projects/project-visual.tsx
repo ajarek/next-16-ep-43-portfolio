@@ -43,7 +43,6 @@ function ProjectImageContainer({ image }: VisualProps) {
         fill
         sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
         className='object-cover object-center'
-        loading='eager'
       />
     </div>
   )
@@ -67,7 +66,6 @@ export function ProjectVisual({ project, className }: ProjectVisualProps) {
 
   return (
     <div
-      aria-hidden
       className={cn(
         "relative flex w-full flex-col overflow-hidden bg-[linear-gradient(160deg,color-mix(in_oklab,var(--project-accent)_12%,var(--surface-container-high))_0%,var(--surface-container-low)_70%)]",
         className,

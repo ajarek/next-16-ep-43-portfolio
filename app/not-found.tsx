@@ -1,10 +1,24 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { ArrowRight, CircleOff } from "lucide-react"
+import { SITE_NAME } from "@/lib/seo"
 
 export const metadata: Metadata = {
   title: "Strona nie znaleziona",
   description: "Strona, której szukasz nie istnieje lub została przeniesiona.",
+  robots: { index: false, follow: false },
+  openGraph: {
+    title: "Strona nie znaleziona | AJAREK DEV",
+    description: "Strona, której szukasz nie istnieje lub została przeniesiona.",
+    siteName: SITE_NAME,
+    locale: "pl_PL",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Strona nie znaleziona | AJAREK DEV",
+    description: "Strona, której szukasz nie istnieje lub została przeniesiona.",
+  },
 }
 
 export default function NotFound() {
@@ -14,9 +28,9 @@ export default function NotFound() {
         <div className='relative text-2xl group-hover:scale-110 transition-transform duration-300'>
           <CircleOff className='w-24 h-24 text-red-500' />
         </div>
-        <h2 className='text-3xl font-bold tracking-tight sm:text-4xl dark:text-white text-black'>
+        <h1 className='text-3xl font-bold tracking-tight sm:text-4xl dark:text-white text-black'>
           Ups! Strona nie została znaleziona
-        </h2>
+        </h1>
         <p className='max-w-84 text-gray-500 dark:text-muted-foreground mt-2'>
           Wygląda na to, że zgubiliśmy drogę. Strona, której szukasz, mogła
           zostać usunięta, przeniesiona lub jest tymczasowo niedostępna.
