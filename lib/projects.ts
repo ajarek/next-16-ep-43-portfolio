@@ -204,6 +204,20 @@ export const PROJECTS: readonly Project[] = [
       alt: "Widok aplikacji Finance Tracker do monitorowania finansów osobistych",
     },
     accent: "#262626"
+  },
+  {
+    id: "driving-school",
+    index: "12",
+    title: "Driving School",
+    description: "Platforma do prowadzenia szkolenia dla kierowców wszystkich kategorii",
+    tags: ["Next.js", "Stripe", "Prisma"],
+    cta: { label: "Szczegóły", href: "https://next-16-ep-48-szkola-jazdy.vercel.app/" },
+    visual: "shop",
+    image: {
+      src: "/images/driving-school.png",
+      alt: "Widok aplikacji driving school",
+    },
+    accent: "#262626"
   }
 ];
 
