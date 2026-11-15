@@ -55,6 +55,21 @@ export interface AboutPassion {
   readonly description: string;
 }
 
+export interface AboutVideoHighlight {
+  readonly title: string;
+  readonly description: string;
+  readonly tag: string;
+}
+
+export interface AboutVideoData {
+  readonly overline: string;
+  readonly title: string;
+  readonly titleAccent: string;
+  readonly description: string;
+  readonly videoSrc: string;
+  readonly highlights: readonly AboutVideoHighlight[];
+}
+
 export interface AboutCta {
   readonly overline: string;
   readonly heading: string;
@@ -74,6 +89,7 @@ export interface AboutConfig {
   readonly milestones: readonly AboutMilestone[];
   readonly workflow: readonly AboutWorkflowStep[];
   readonly passions: readonly AboutPassion[];
+  readonly video: AboutVideoData;
   readonly cta: AboutCta;
 }
 
@@ -224,6 +240,34 @@ export const ABOUT_DATA: AboutConfig = {
         "Badanie możliwości integracji modeli językowych w aplikacjach webowych.",
     },
   ],
+  video: {
+    overline: "Wizytówka & Rzemiosło w kadrze",
+    title: "Koncepcja, ruch i precyzja",
+    titleAccent: "w akcji",
+    description:
+      "Wgląd w estetykę, dynamikę interfejsu i podejście do detalu. Zobacz, jak zasady projektowe ożywają w działającym produkcie w pełnej płynności 60 FPS.",
+    videoSrc: "/videos/about-me-video.mp4",
+    highlights: [
+      {
+        title: "Mikrointerakcje & Motion",
+        description:
+          "Harmonijne animacje i reakcje na akcje użytkownika, które budują wrażenie lekkości.",
+        tag: "UI / Motion",
+      },
+      {
+        title: "Next.js 16 & React 19",
+        description:
+          "Zoptymalizowana architektura serwerowa i błyskawiczne renderowanie zasobów.",
+        tag: "Performance",
+      },
+      {
+        title: "Estetyka Future-Noir",
+        description:
+          "Szklane panele, subtelne rozmycia i dopracowane gradienty zgodne z design systemem.",
+        tag: "Design System",
+      },
+    ],
+  },
   cta: {
     overline: "Współpraca",
     heading: "Stwórzmy razem coś wyjątkowego",

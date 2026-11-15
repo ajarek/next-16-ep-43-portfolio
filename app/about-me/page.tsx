@@ -1,4 +1,5 @@
 import { AboutCta } from "@/components/about/about-cta"
+import { AboutHero } from "@/components/about/about-hero"
 import { AboutManifesto } from "@/components/about/about-manifesto"
 import { AboutPassions } from "@/components/about/about-passions"
 import { AboutTimeline } from "@/components/about/about-timeline"
@@ -25,6 +26,7 @@ export default function AboutMePage() {
     stats,
     manifesto,
     developerProfile,
+    video,
     values,
     milestones,
     workflow,
@@ -42,49 +44,8 @@ export default function AboutMePage() {
       <ContactSpotlight />
 
       <div className='relative mx-auto flex max-w-7xl flex-col gap-14 pb-8'>
-        {/* ——— Nagłówek strony ——— */}
-        <header className='flex flex-col gap-6 md:flex-row md:items-end md:justify-between'>
-          <div className='max-w-2xl space-y-4'>
-            <div className='flex flex-wrap items-center gap-x-4 gap-y-2'>
-              <span className='text-label inline-flex items-center gap-2 text-primary'>
-                <span className='size-2 rounded-full bg-primary shadow-[0_0_12px_var(--primary)]' />
-                {page.overline}
-              </span>
-              <span className='font-mono text-xs tracking-[0.2em] text-on-surface-variant/60'>
-                {page.path}
-              </span>
-            </div>
-            <h1 className='text-headline-lg-responsive text-foreground'>
-              {page.heading}{" "}
-              <span className='text-primary'>{page.headingAccent}</span>
-            </h1>
-            <p className='max-w-xl text-body-lg text-muted-foreground'>
-              {page.description}
-            </p>
-          </div>
-
-          <dl className='flex flex-wrap items-center gap-x-4 gap-y-2 font-mono text-sm tracking-[0.15em] text-on-surface-variant/70 sm:gap-x-6'>
-            {stats.map((stat, index) => {
-              const dotColors = [
-                "bg-tertiary shadow-[0_0_10px_var(--tertiary)]",
-                "bg-primary shadow-[0_0_10px_var(--primary)]",
-                "bg-cyan-400 shadow-[0_0_10px_#22d3ee]",
-              ]
-              const dotColor = dotColors[index % dotColors.length]
-
-              return (
-                <div key={stat.label} className='flex items-center gap-2'>
-                  <span
-                    aria-hidden
-                    className={`inline-flex size-2 rounded-full ${dotColor}`}
-                  />
-                  <dt className='sr-only'>{stat.label}</dt>
-                  <dd>{stat.value}</dd>
-                </div>
-              )
-            })}
-          </dl>
-        </header>
+        {/* ——— Sekcja Hero z wideo-wizytówką na początku strony ——— */}
+        <AboutHero page={page} stats={stats} video={video} />
 
         {/* ——— Manifest & Interaktywny profil ——— */}
         <AboutManifesto
