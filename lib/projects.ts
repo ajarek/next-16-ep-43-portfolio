@@ -79,6 +79,24 @@ export function sortProjectsByIndexDesc(
 
 const RAW_PROJECTS: readonly Project[] = [
   {
+    id: "aura-ring",
+    index: "15",
+    title: "Aura Ring",
+    description:
+      "Sklep z inteligentnymi pierścieniami, łatwa kontrola parametrów i aktywności",
+    tags: ["Next.js", "Stripe", "Prisma"],
+    cta: {
+      label: "Szczegóły",
+      href: "https://next-16-ep-50-ecommerce-rrings.vercel.app/",
+    },
+    visual: "shop",
+    image: {
+      src: "/images/ring.png",
+      alt: "Widok sklepu internetowego Aura Ring",
+    },
+    accent: "#3B82F6",
+  },
+  {
     id: "iphone-duo",
     index: "14",
     title: "iPhone Duo",

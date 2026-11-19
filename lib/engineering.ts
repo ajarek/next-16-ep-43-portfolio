@@ -59,7 +59,7 @@ export const ENGINEERING: EngineeringConfig = {
     href: "#",
   },
   image: {
-    src: "/images/skill-hub.png",
+    src: "/images/skill-hub.gif",
     alt: "Centralny stos technologiczny — świecący sześcian otoczony ikonami React, Node.js, Next.js, TypeScript i Prisma",
     width: 1024,
     height: 1024,
